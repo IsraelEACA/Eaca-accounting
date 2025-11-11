@@ -1,9 +1,11 @@
 import React from "react";
 
+import { Homepages } from "@/exports/exports";
+
 export default function HomePage() {
   return (
     <div>
-      <h1>hello worls</h1>
+      <Homepages />
     </div>
   );
 }

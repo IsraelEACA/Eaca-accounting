@@ -1,9 +1,15 @@
-import React from "react";
+import { ContactUsPage } from "@/exports/exports";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Reach out via our info",
+};
 
 export default function ContactPage() {
   return (
     <div>
-      <h1>hello worls</h1>
+      <ContactUsPage />
     </div>
   );
 }

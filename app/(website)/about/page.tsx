@@ -1,9 +1,15 @@
-import React from "react";
+import { AboutUsPage } from "@/exports/exports";
+import { Metadata } from "next";
 
-export default function page() {
+export const metadata: Metadata = {
+  title: "About us",
+  description: "Know more about Elevare",
+};
+
+export default function AboutPage() {
   return (
     <div>
-      <h1>hello worls</h1>
+      <AboutUsPage />
     </div>
   );
 }

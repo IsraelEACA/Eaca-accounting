@@ -1,9 +1,15 @@
-import React from "react";
+import { ServicesPage } from "@/exports/exports";
+import { Metadata } from "next";
 
-export default function ServicesPage() {
+export const metadata: Metadata = {
+  title: "Services",
+  description: "Explore our various services | Elevare advisory",
+};
+
+export default function Services() {
   return (
     <div>
-      <h1>hello worls</h1>
+      <ServicesPage />
     </div>
   );
 }

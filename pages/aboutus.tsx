@@ -1,9 +1,13 @@
-import React from "react";
+"use Client";
+
+import { ProfessionalValue, AboutComponent, WhyChooseUs } from "./homepage";
 
 export default function AboutUs() {
   return (
-    <div>
-      <h1>about us</h1>
+    <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1200px] mx-auto">
+      <AboutComponent />
+      <ProfessionalValue />
+      <WhyChooseUs />
     </div>
   );
 }
