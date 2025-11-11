@@ -22,6 +22,9 @@ import Dedication from "@/public/dedication.svg";
 import Reliability from "@/public/reliability.svg";
 import Excellence from "@/public/excellence.svg";
 
+// contact us Images
+import ContactBanner from "@/public/contact-us-image.jpg";
+
 interface ImageData {
   LogoImage: StaticImageData;
   BannerImage: StaticImageData;
@@ -44,6 +47,9 @@ interface ImageData {
   Dedication: StaticImageData;
   Reliability: StaticImageData;
   Excellence: StaticImageData;
+
+  // contact us image imports
+  ContactBanner: StaticImageData;
 }
 
 export const EacaImages: ImageData = {
@@ -67,4 +73,7 @@ export const EacaImages: ImageData = {
   Dedication,
   Reliability,
   Excellence,
+
+  // contact us images
+  ContactBanner,
 };

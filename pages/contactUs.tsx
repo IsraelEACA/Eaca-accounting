@@ -1,9 +1,11 @@
-import React from "react";
+"use Client";
+
+import { ContactUsComponent } from "./homepage";
 
 export default function ContactUs() {
   return (
-    <div>
-      <h1>contact us</h1>
+    <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1200px] mx-auto">
+      <ContactUsComponent />
     </div>
   );
 }
