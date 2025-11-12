@@ -312,7 +312,7 @@ export function WhyChooseUs() {
 // contact us components
 export function ContactUsComponent() {
   return (
-    <div className="mt-16">
+    <div className="mt-8">
       <div className="text-center">
         <h1 className="text-[48px]">
           Let&apos;s <span className="text-[#f97316]">Talk</span> ?
@@ -407,7 +407,7 @@ export function ContactUsComponent() {
                 Schedule a no-commitment conversation to discuss your
                 company&apos;s needs and learn about our solutions.
               </p>
-              <Button className="bg-white text-[#0e0e0e] w-full capitalize cursor-pointer py-6 rounded-xl">
+              <Button className="bg-white hover:bg-[#0e0e0e] hover:text-white  text-[#0e0e0e] w-full capitalize cursor-pointer py-6 rounded-xl duration-300">
                 Schedule Now
               </Button>
             </div>
