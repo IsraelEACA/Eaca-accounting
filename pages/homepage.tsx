@@ -38,7 +38,7 @@ export default function Homepage() {
 
 export function HomepageBanner() {
   return (
-    <section className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1150px] mx-auto mt-16">
+    <section className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1150px] mx-auto mt-32">
       <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-12">
         <div>
           {/* header text */}
@@ -72,7 +72,7 @@ export function HomepageBanner() {
               <span>Free Consultation</span>
               <ChevronRight />
             </Button>
-            <Button className="w-1/2 py-6 bg-transparent text-[#0a0a0a] border border-[#0a0a0a] cursor-pointer">
+            <Button className="w-1/2 py-6 bg-transparent text-[#0a0a0a] hover:text-white border border-[#0a0a0a] cursor-pointer">
               View Services
             </Button>
           </div>
@@ -115,7 +115,7 @@ export function HomepageBanner() {
 
 export function ComprehensiveServices() {
   return (
-    <div className="bg-[#ECECF04D] py-12 mt-48 w-full">
+    <div className="bg-[#ECECF04D] py-12 mt-24 w-full">
       <div className="text-center">
         <h1 className="text-[42px] sm:text-[48px]">
           <span className="text-[#f97316]">Complete</span> Services for your
@@ -277,7 +277,7 @@ export function ProfessionalValue() {
         </p>
       </div>
       {/* values grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 items-center gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 items-center gap-10 mx-8 xs:mx-12 sm:mx-0">
         {PROFESSIONALVALUES.map((values, index) => (
           <div
             key={index}
@@ -327,7 +327,7 @@ export function WhyChooseUs() {
 // contact us components
 export function ContactUsComponent() {
   return (
-    <div className="mt-8">
+    <div className="mt-32">
       <div className="text-center">
         <h1 className="text-[48px]">
           Let&apos;s <span className="text-[#f97316]">Talk</span> ?

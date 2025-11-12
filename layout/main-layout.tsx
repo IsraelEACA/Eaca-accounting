@@ -8,7 +8,7 @@ type MainLayoutProps = { children: React.ReactNode };
 export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="">
-      {/* <Header /> */}
+      <Header />
       <main className="">{children}</main>
       <Footer />
     </div>
