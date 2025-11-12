@@ -1,5 +1,28 @@
 import { EacaImages } from "@/constant/image";
 
+export const HEADERLINKSHELPERDATA = [
+  {
+    linkName: "home",
+    link: "/",
+  },
+  {
+    linkName: "Services",
+    link: "/services",
+  },
+  {
+    linkName: "About Us",
+    link: "/about",
+  },
+  {
+    linkName: "Blog",
+    link: "/blog",
+  },
+  {
+    linkName: "Contact Us",
+    link: "/contact",
+  },
+];
+
 export const SERVICESDATA = [
   {
     iconImage: EacaImages.TaxAccounting,

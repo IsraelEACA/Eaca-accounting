@@ -13,62 +13,16 @@ import {
   Phone,
   Twitter,
 } from "lucide-react";
-
-const FOOTERHELPERSDATA = [
-  {
-    title: "Services",
-    links: [
-      "Tax Accounting",
-      "Payroll Services",
-      "Business Consulting",
-      "Business Formation",
-      "Tax Planning",
-      "Management Reports",
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      "About the Professional",
-      "Qualifications",
-      "Accounting Blog",
-      "Tax Tips",
-      "Tax Calendar",
-      "Downloads",
-    ],
-  },
-  {
-    title: "Support",
-    links: [
-      "Schedule Consultation",
-      "WhatsApp",
-      "Email",
-      "FAQ",
-      "Hours",
-      "Client Portal",
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      "Privacy Policy",
-      "Terms of Service",
-      "Code of Ethics",
-      "Data Protection",
-      "Certifications",
-      "Active CPA",
-    ],
-  },
-];
+import { FOOTERHELPERSDATA } from "@/helpers/footer-helpers";
 
 export default function footer() {
   return (
     <div className="border-t border-t-zinc-200 pt-8">
       <footer className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1200px] mx-auto">
         {/* main footer */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-[35%_20%_20%_20%] gap-16 items-start py-8">
+        <div className="grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-[35%_20%_20%_20%] gap-16 items-start py-8">
           {/* first contents */}
-          <div className="">
+          <div className="col-span-2">
             <Image
               src={EacaImages.LogoImage}
               alt="footer_logo"
@@ -105,7 +59,9 @@ export default function footer() {
           {/* helpers lists */}
           {FOOTERHELPERSDATA.map((footers, index) => (
             <div key={index}>
-              <h1 className="text-[#0A0A0A] text-[20px]">{footers.title}</h1>
+              <h1 className="text-[20px] text-orange-400 font-semibold">
+                {footers.title}
+              </h1>
               {footers.links.map((footerlinks, index) => (
                 <p key={index} className="text-[#717182] leading-10">
                   {footerlinks}
@@ -116,13 +72,14 @@ export default function footer() {
         </div>
         <div></div>
         {/* sub footer */}
-        <div className="flex items-center justify-between border-t border-t-zinc-300 py-8">
+        <div className="flex flex-col sm:flex-row items-center sm:justify-between border-t border-t-zinc-300 py-8 gap-8 sm:gap-0">
           <div className="">
-            <h1 className="font-semibold text-[20px]">
+            <h1 className="font-semibold text-[20px] text-orange-400 capitalize">
               Recieve accounting tips
             </h1>
-            <p className="text-[#717182]">
-              Subscribe to our newsletter and receive information about <br />
+            <p className="text-[#717182] text-[16px]">
+              Subscribe to our newsletter and receive information about{" "}
+              <br className="hidden sm:block" />
               legislation, deadlines, and opportunities.
             </p>
           </div>
@@ -131,7 +88,7 @@ export default function footer() {
             <div className="flex items-center gap-2">
               <Input
                 type="text"
-                className="w-100"
+                className="sm:w-100"
                 placeholder="Enter your email"
               />
               <Button className="bg-[#f97316] text-white hover:bg-orange-500 duration-300 cursor-pointer">
@@ -142,15 +99,17 @@ export default function footer() {
         </div>
         <div className=""></div>
         {/* copy right */}
-        <div className="text-[#717182] flex justify-between items-center border-t border-t-zinc-300 py-8">
-          <p>
-            © 2025 Elevare Advisory & Chartered Accountants. All rights
-            reserved.
+        <div className="text-[#717182] flex flex-col-reverse sm:flex-row justify-between items-center gap-10 sm:gap-0 border-t border-t-zinc-300 py-8">
+          <p className="text-center sm:text-left">
+            <span className="text-orange-400 font-medium">
+              © 2025 Elevare Advisory & Chartered Accountants.
+            </span>{" "}
+            All rights reserved.
           </p>
           <div className="flex items-center gap-12">
-            <p>Policy</p>
-            <p>Terms of use</p>
-            <p>Code Ethics</p>
+            <p className="hover:text-orange-400 duration-300">Policy</p>
+            <p className="hover:text-orange-400 duration-300">Terms of use</p>
+            <p className="hover:text-orange-400 duration-300">Code Ethics</p>
           </div>
         </div>
       </footer>

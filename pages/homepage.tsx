@@ -19,6 +19,7 @@ import {
   WHYCHOOSEUSDATA,
 } from "@/helpers/homepage.helpers";
 import ContactForm from "@/components/others/contact-form";
+import Link from "next/link";
 
 export default function Homepage() {
   return (
@@ -38,14 +39,14 @@ export default function Homepage() {
 export function HomepageBanner() {
   return (
     <section className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1150px] mx-auto mt-16">
-      <div className="grid grid-cols-2 items-start gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-12">
         <div>
           {/* header text */}
-          <h1 className="text-[60px] leading-[70px]">
-            <span className="text-[#f97316]">Reliable</span> <br /> Accounting
-            That Stirs Confidence
+          <h1 className="text-[48px] sm:text-[56px] md:text-[60px] sm:leading-[70px]">
+            <span className="text-[#f97316]">Reliable</span>{" "}
+            <br className="hidden sm:block" /> Accounting That Stirs Confidence
           </h1>
-          <p className="text-[#717182] leading-7 text-[18px]">
+          <p className="text-[#717182] leading-7 sm:text-[18px]">
             Elevare Advisory & Chartered Accountants provides accounting for
             small businesses, sole proprietors, financial services firms,
             contractors and freelancers. We give you clarity in your numbers and
@@ -68,7 +69,7 @@ export function HomepageBanner() {
           </div>
           <div className="flex items-center gap-2 mt-6 w-full">
             <Button className="w-1/2 py-6 bg-[#F97316] text-white hover:bg-orange-500 hover:text-[#171717] duration-300 cursor-pointer">
-              <span>Schedule Free Consultation</span>
+              <span>Free Consultation</span>
               <ChevronRight />
             </Button>
             <Button className="w-1/2 py-6 bg-transparent text-[#0a0a0a] border border-[#0a0a0a] cursor-pointer">
@@ -76,18 +77,18 @@ export function HomepageBanner() {
             </Button>
           </div>
           {/* business statistics */}
-          <div className="grid grid-cols-3 items-center gap-4 mt-16">
+          <div className="grid grid-cols-2 sm:grid-cols-3 items-center gap-8 sm:gap-4 mt-16">
             <div className="text-center">
-              <h1 className="text-[24px] text-[#f97316]">Chatered</h1>
-              <p className="text-[#717182]">Qualified Accountant</p>
+              <h1 className="sm:text-[24px] text-[#f97316]">Chatered</h1>
+              <p className="text-[#717182] text-[14px]">Qualified Accountant</p>
             </div>
             <div className="text-center">
-              <h1 className="text-[24px] text-[#f97316]">10+ Years</h1>
-              <p className="text-[#717182]">Experience</p>
+              <h1 className="sm:text-[24px] text-[#f97316]">10+ Years</h1>
+              <p className="text-[#717182] text-[14px]">Experience</p>
             </div>
-            <div className="text-center">
-              <h1 className="text-[24px] text-[#f97316]">100% Online</h1>
-              <p className="text-[#717182]">Remote services</p>
+            <div className="text-center col-span-2">
+              <h1 className="sm:text-[24px] text-[#f97316]">100% Online</h1>
+              <p className="text-[#717182] text-[14px]">Remote services</p>
             </div>
           </div>
         </div>
@@ -116,17 +117,17 @@ export function ComprehensiveServices() {
   return (
     <div className="bg-[#ECECF04D] py-12 mt-48 w-full">
       <div className="text-center">
-        <h1 className="text-[48px]">
+        <h1 className="text-[42px] sm:text-[48px]">
           <span className="text-[#f97316]">Complete</span> Services for your
           company
         </h1>
-        <p className="text-[18px] text-[#717182]">
+        <p className="sm:text-[18px] text-[#717182] mt-4">
           Personalized accounting solutions that accompany your business growth{" "}
           <br />
           with safety and efficiency.
         </p>
       </div>
-      <div className="services_data grid grid-cols-3 items-center gap-12 mx-12 mt-12">
+      <div className="services_data grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-12 mx-4 sm:mx-12 mt-12">
         {SERVICESDATA.map((service, index) => (
           <div key={index} className="bg-white h-90 p-6 rounded-xl border">
             <div className="bg-[#f97316]/10 p-4 rounded-xl inline-block">
@@ -153,14 +154,14 @@ export function ComprehensiveServices() {
 export function AboutComponent() {
   return (
     <div className="py-12 mt-12 bg-white">
-      <div className="grid grid-cols-2 items-center gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
         <div className="">
           <div>
-            <h1 className="text-[60px] leading-[66px]">
-              Your partner in <br />
+            <h1 className="text-[48px] sm:text-[60px] leading-[66px]">
+              Your partner in <br className="hidden sm:block" />
               <span className="text-[#F97316]">financial excellence</span>
             </h1>
-            <p className="text-[#717182] leading-7 text-[18px] text-balance">
+            <p className="text-[#717182] leading-7 sm:text-[18px] sm:text-balance">
               As a chartered accountant with over 10 years of experience, I
               specialize in helping ambitious businesses achieve their goals
               through strategic financial guidance. At Elevare Advisory, we
@@ -181,17 +182,17 @@ export function AboutComponent() {
           </div>
           {/* grad experience */}
           <div className="mt-4">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-row items-center gap-3">
               <GraduationCap color="#f97316" />
               <p>Qualifications and Certifications:</p>
             </div>
             {/* about grid items */}
-            <div className="grid grid-cols-2 items-center gap-4">
+            <div className="grid sm:grid-cols-2 items-center gap-8 sm:gap-4">
               <div className="flex items-center gap-3">
                 <CircleCheckBig color="#00C950" size={18} />
                 <p>Chartered Accountant (CA)</p>
               </div>
-              <div className="flex items-center gap-3 my-5">
+              <div className="flex items-center gap-3 sm:my-5">
                 <CircleCheckBig color="#00C950" size={18} />
                 <p> Bachelor&apos;s in Accounting & Finance</p>
               </div>
@@ -214,10 +215,12 @@ export function AboutComponent() {
             </div>
             {/* about scheduling button */}
             <div className="mt-4">
-              <Button className="w-1/2 py-6 bg-[#F97316] text-white hover:bg-orange-500 hover:text-[#171717] duration-300 cursor-pointer">
-                <span>Schedule a Conversation</span>
-                <ChevronRight />
-              </Button>
+              <Link href={"/contact"}>
+                <Button className="w-1/2 py-6 bg-[#F97316] text-white hover:bg-orange-500 hover:text-[#171717] duration-300 cursor-pointer">
+                  <span>Free consultation</span>
+                  <ChevronRight />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -228,21 +231,33 @@ export function AboutComponent() {
             className="w-full"
           />
           <div className="grid grid-cols-2 items-center gap-6 mt-8">
-            <div className="bg-[#ECECF080] p-8 rounded-xl flex flex-col items-center justify-center">
-              <h1 className="text-[#F97316] text-[24px]">10+</h1>
-              <p className="text-[#717182] capitalize">Years Experience</p>
+            <div className="bg-[#ECECF080] py-8 px-3 sm:p-8 rounded-xl flex flex-col items-center justify-center">
+              <h1 className="text-[#F97316] text-[18px] sm:text-[24px]">10+</h1>
+              <p className="text-[#717182] capitalize text-center">
+                Years Experience
+              </p>
             </div>
-            <div className="bg-[#ECECF080] p-8 rounded-xl flex flex-col items-center justify-center">
-              <h1 className="text-[#F97316] text-[24px]">100%</h1>
-              <p className="text-[#717182] capitalize">Client dedication</p>
+            <div className="bg-[#ECECF080] py-8 px-3 sm:p-8 rounded-xl flex flex-col items-center justify-center">
+              <h1 className="text-[#F97316] text-[18px] sm:text-[24px]">
+                100%
+              </h1>
+              <p className="text-[#717182] capitalize text-center">
+                Client dedication
+              </p>
             </div>
-            <div className="bg-[#ECECF080] p-8 rounded-xl flex flex-col items-center justify-center">
-              <h1 className="text-[#F97316] text-[24px]">24h</h1>
-              <p className="text-[#717182] capitalize">Response time</p>
+            <div className="bg-[#ECECF080] py-8 px-3 sm:p-8 rounded-xl flex flex-col items-center justify-center">
+              <h1 className="text-[#F97316] text-[18px] sm:text-[24px]">24h</h1>
+              <p className="text-[#717182] capitalize text-center">
+                Response time
+              </p>
             </div>
-            <div className="bg-[#ECECF080] p-8 rounded-xl flex flex-col items-center justify-center">
-              <h1 className="text-[#F97316] text-[24px]">Online</h1>
-              <p className="text-[#717182] capitalize">Remote services</p>
+            <div className="bg-[#ECECF080] py-8 px-3 sm:p-8 rounded-xl flex flex-col items-center justify-center">
+              <h1 className="text-[#F97316] text-[18px] sm:text-[24px]">
+                Online
+              </h1>
+              <p className="text-[#717182] capitalize text-center">
+                Remote services
+              </p>
             </div>
           </div>
         </div>
@@ -262,7 +277,7 @@ export function ProfessionalValue() {
         </p>
       </div>
       {/* values grid */}
-      <div className="grid grid-cols-4 items-center gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 items-center gap-10">
         {PROFESSIONALVALUES.map((values, index) => (
           <div
             key={index}
@@ -282,17 +297,17 @@ export function ProfessionalValue() {
 
 export function WhyChooseUs() {
   return (
-    <div className="bg-[#ECECF04D] py-12 mt-48 w-full">
+    <div className="bg-[#ECECF04D] py-12 mt-24 sm:mt-48 w-full">
       <div className="text-center">
-        <h1 className="text-[48px]">
+        <h1 className="text-[42px] sm:text-[48px]">
           Why choose <span className="text-[#f97316]">Elevare Advisory</span> ?
         </h1>
-        <p className="text-[18px] text-[#717182]">
+        <p className="sm:text-[18px] text-[#717182]">
           Benefits of working with a dedicated, qualified professional committed
           to your company&apos;s success.
         </p>
       </div>
-      <div className="services_data grid grid-cols-3 items-center gap-12 mx-12 mt-12 pb-8 border-b border-b-zinc-200">
+      <div className="services_data grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-12 mx-4 sm:mx-12 mt-12 pb-8 border-b border-b-zinc-200">
         {WHYCHOOSEUSDATA.map((choose, index) => (
           <div key={index} className="bg-white h-75 p-6 rounded-xl border">
             <div className="bg-[#f97316]/10 p-4 rounded-xl inline-block">
@@ -322,7 +337,7 @@ export function ContactUsComponent() {
           discover <br /> how I can help your business grow.
         </p>
       </div>
-      <div className="grid grid-cols-[40%_55%] items-start gap-10 mt-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[40%_55%] items-start gap-10 mt-16">
         <div>
           <ContactForm />
         </div>
