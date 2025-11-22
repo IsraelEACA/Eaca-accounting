@@ -2,143 +2,170 @@ import { EacaImages } from "@/constant/image";
 
 export const HEADERLINKSHELPERDATA = [
   {
-    linkName: "home",
-    link: "/",
+    linkName: "About Us",
+    link: "/about",
   },
   {
     linkName: "Services",
     link: "/services",
   },
   {
-    linkName: "About Us",
-    link: "/about",
+    linkName: "Pricing",
+    link: "/pricing",
   },
   {
     linkName: "Blog",
     link: "/blog",
   },
+];
+
+export const HOWITWORKSDATA = [
   {
-    linkName: "Contact Us",
-    link: "/contact",
+    title: "What sets us apart",
+    description: [
+      "Two-way communication",
+      "personalized service",
+      "Transparent fixed pricing",
+      "Premium quality & add-on busines advisory",
+      "Tech-enabled efficiency",
+      "client growth as success metric",
+      "Ambitious client focus",
+    ],
+  },
+  {
+    title: "Our Firm",
+    description: [
+      "Open, responsive, and collaborative approach",
+      "Tailored solutions aligned with your business goals",
+      "clear, fixed pricing. No surprises!",
+      "High-quality accounting plus strategic business advice",
+      "Smart automation that frees time for value creation",
+      "Invested in your business growth and long-term success",
+      "we partner with driven, growth-oriented SMEs",
+    ],
+  },
+  {
+    title: "Other Accountants",
+    description: [
+      "Limited contact, mostly one-sided",
+      "One-size-fits-all approach",
+      "Hourly rates with hidden fees",
+      "Basic compliance services  ",
+      "Manual, paper-heavy processes",
+      "Focus on reporting",
+      "works with any client",
+    ],
   },
 ];
 
-export const SERVICESDATA = [
+export const ACCOUNTINGDATA = [
+  // remeber to include icons
   {
-    iconImage: EacaImages.TaxAccounting,
-    title: "Tax Accounting",
+    icon: EacaImages.Bookeeping,
+    title: "Book-keeping",
     description:
-      "Complete management of your company’s tax and fiscal obligations with efficiency and precision.",
-    features: ["Tax calculations", "Fiscal bookkeeping", "Tax planning"],
+      "No business succeeds without getting this right. We keep your books accurate and up to date so your financial data is always at your fingertips.",
   },
   {
-    iconImage: EacaImages.PayrollServices,
-    title: "Payroll Services",
+    icon: EacaImages.Accounting,
+    title: "Accounting",
     description:
-      "Payroll administration and complete human resources management.",
-    features: ["Payroll processing", "Payroll taxes", "Hiring & terminations"],
+      "Your Annual Accounts, Payroll, and Compliance all handled stress-free.",
   },
   {
-    iconImage: EacaImages.Bookeeping,
-    title: "Bookkeeping",
-    description:
-      "Recording of all financial operations with organization and legal compliance.",
-    features: ["Balance sheet", "Income statement", "Bank reconciliations"],
-  },
-  {
-    iconImage: EacaImages.BusinessFormation,
-    title: "Business Formation",
-    description:
-      "Complete assistance for formalizing your business quickly and hassle-free.",
-    features: ["Entity selection", "State registration", "Permits & licenses"],
-  },
-  {
-    iconImage: EacaImages.Compliance,
-    title: "Compliance & Licensing",
-    description: "Ensuring compliance with all current norms and legislation.",
-    features: ["Internal audit", "Tax compliance", "Digital certificates"],
-  },
-  {
-    iconImage: EacaImages.BusinessConsulting,
-    title: "Business Consulting",
-    description:
-      "Strategic guidance for decision-making and sustainable business growth.",
-    features: ["Financial analysis", "Cost reduction", "Growth strategies"],
-  },
-  {
-    iconImage: EacaImages.ManagementReports,
-    title: "Management Reports",
-    description:
-      "Clear and objective information to monitor your company’s financial health.",
-    features: ["Monthly dashboards", "KPIs", "Results analysis"],
-  },
-  {
-    iconImage: EacaImages.TaxPlanning,
+    icon: EacaImages.TaxPlanning,
     title: "Tax Planning",
     description:
-      "Legal strategies to optimize tax burden and increase profitability.",
-    features: ["Entity analysis", "Tax savings", "Tax simulations"],
+      "Helping you maximise tax-saving opportunities whilst ensuring you stay tax-compliant.",
+  },
+  {
+    icon: EacaImages.OutSourced,
+    title: "Outsourced Finance Team",
+    description: "Gain flexible access to an expert, hands-on finance partner.",
+  },
+  {
+    icon: EacaImages.Management,
+    title: "Management Accounts",
+    description:
+      "Gain a complete view of your business's financial health – empowering confident, informed decisions at every stage.",
+  },
+  {
+    icon: EacaImages.Digital,
+    title: "Digital  Transformation",
+    description:
+      "We help you leverage the right tools to streamline your processes and create a more seamless workflow.",
   },
 ];
 
-export const PROFESSIONALVALUES = [
+export const WHOWEWORKDATA = [
   {
-    iconImage: EacaImages.Precision,
-    title: "precision",
-    description: "Meticulous work focused on details and total compliance.",
+    // icons should be added later on
+    icon: EacaImages.FinancialServices,
+    title: "FCA-regulated Financial Services firms & Fintechs",
   },
   {
-    iconImage: EacaImages.Dedication,
-    title: "Dedication",
-    description: "Personalized service with total commitment to your success",
+    // icons should be added later on
+    icon: EacaImages.HighGrowth,
+    title: "High-Growth Start-ups",
   },
   {
-    iconImage: EacaImages.Reliability,
-    title: "Reliability",
-    description: "Transparency and ethics in all professional relationships",
+    // icons should be added later on
+    icon: EacaImages.PropertyDevelopers,
+    title: "Property Developers",
   },
   {
-    iconImage: EacaImages.Excellence,
-    title: "Excellence",
-    description: "Continuous pursuit of updates and best accpunting practices.",
+    // icons should be added later on
+    icon: EacaImages.Manufacturing,
+    title: "Manufacturing, Retail & Construction",
+  },
+  {
+    // icons should be added later on
+    icon: EacaImages.Consultancy,
+    title: "Legal firms, Recruitment & Consultancy",
+  },
+  {
+    // icons should be added later on
+    icon: EacaImages.ManagementServices,
+    title: "General Owner-managed businesses",
   },
 ];
 
-export const WHYCHOOSEUSDATA = [
+export const PRICINGDATA = [
   {
-    iconImage: EacaImages.Reliability,
-    title: "Security & Compliance",
-    description:
-      "Keep your company always up to date with all tax and labor obligations, avoiding fines and penalties.",
+    pricingTitle: "Foundation Plan",
+    pricing: "250",
+    pricingDescription:
+      "For new/small-owner managed businesses Stay compliant & on top of your finances",
+    pricingData: "Everything included",
+    pricingList: [
+      "weekly bookkeeping",
+      "VAT returns",
+      "Annual accounts preparation",
+      "Tax planning and review",
+      "Telephone and email support",
+      "General business advisory & insights",
+    ],
   },
   {
-    iconImage: EacaImages.Dedication,
-    title: "Time Saving",
-    description:
-      "Focus on growing your business while I efficiently handle all accounting and bureaucratic matters.",
+    pricingTitle: "Momentum Plan",
+    pricing: "450",
+    pricingDescription:
+      "Collaborating with you to make smart business decisions",
+    pricingData: "Everything in foundation plan plus;",
+    pricingList: ["Quarterly reporting", "Annual business review reports"],
   },
   {
-    iconImage: EacaImages.Reliability,
-    title: "Strategic Planning",
-    description:
-      "Receive expert guidance to make more assertive financial decisions and increase your profitability.",
-  },
-  {
-    iconImage: EacaImages.Excellence,
-    title: "Personalized Service",
-    description:
-      "As an independent professional, I offer dedicated attention and availability to meet your specific needs.",
-  },
-  {
-    iconImage: EacaImages.Excellence,
-    title: "Proven Expertise",
-    description:
-      "Over 10 years of experience in business accounting, with continuous training and updated certifications.",
-  },
-  {
-    iconImage: EacaImages.Excellence,
-    title: "Technology and Convenience",
-    description:
-      "100% online service with modern tools to facilitate communication and real-time monitoring.",
+    pricingTitle: "Ascent Plan",
+    pricing: "850",
+    pricingDescription:
+      " Get an outsourced Finance  Partner & controller for your business",
+    pricingData: "Everything in Monumental plan plus;",
+    pricingList: [
+      "Payroll services",
+      "Monthly management accounts",
+      "Annual budgeting review",
+      "Board meeting attendance (as required)",
+      "Forecasting & Analysis",
+    ],
   },
 ];

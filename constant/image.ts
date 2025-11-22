@@ -2,47 +2,38 @@ import { StaticImageData } from "next/image";
 
 import LogoImage from "@/public/logo.svg";
 import BannerImage from "@/public/banner-img.svg";
-
-// services Icons
-import TaxAccounting from "@/public/tax-accounting.svg";
-import PayrollServices from "@/public/payroll.svg";
-import Bookeeping from "@/public/bookeeping.svg";
-import BusinessFormation from "@/public/business-formation.svg";
-import Compliance from "@/public/compliance.svg";
-import BusinessConsulting from "@/public/business-consulting.svg";
-import ManagementReports from "@/public/management-reports.svg";
-import TaxPlanning from "@/public/tax-planning.svg";
-
-// about us images
-import AboutFounder from "@/public/about-founder.svg";
+import AccountBanner from "@/public/images/account-banner.svg";
 
 // professional value exports
-import Precision from "@/public/precision.svg";
-import Dedication from "@/public/dedication.svg";
 import Reliability from "@/public/reliability.svg";
 import Excellence from "@/public/excellence.svg";
 
-// contact us Images
+// new image Imports
+import Precision from "@/public/precision.svg";
+import Dedication from "@/public/dedication.svg";
+import AboutImage from "@/public/images/aboutImage.svg";
 import ContactBanner from "@/public/contact-us-image.jpg";
+
+// services imports
+import Bookeeping from "@/public/images/bookeeping.svg";
+import Accounting from "@/public/images/accounting.svg";
+import TaxPlanning from "@/public/images/tax-planning.svg";
+import OutSourced from "@/public/images/outsourced.svg";
+import Management from "@/public/images/management.svg";
+import Digital from "@/public/images/digital.svg";
+
+// who we work with
+import FinancialServices from "@/public/images/finance-services.svg";
+import HighGrowth from "@/public/images/high-growth.svg";
+import PropertyDevelopers from "@/public/images/property-developer.svg";
+import Manufacturing from "@/public/images/construction.svg";
+import Consultancy from "@/public/images/consultancy.svg";
+import ManagementServices from "@/public/images/management.svg";
 
 interface ImageData {
   LogoImage: StaticImageData;
   BannerImage: StaticImageData;
-
-  // services imports
-  TaxAccounting: StaticImageData;
-  PayrollServices: StaticImageData;
-  Bookeeping: StaticImageData;
-  BusinessFormation: StaticImageData;
-  Compliance: StaticImageData;
-  BusinessConsulting: StaticImageData;
-  ManagementReports: StaticImageData;
-  TaxPlanning: StaticImageData;
-
-  // about us images
-  AboutFounder: StaticImageData;
-
-  // professional Image
+  AccountBanner: StaticImageData;
   Precision: StaticImageData;
   Dedication: StaticImageData;
   Reliability: StaticImageData;
@@ -50,24 +41,29 @@ interface ImageData {
 
   // contact us image imports
   ContactBanner: StaticImageData;
+
+  // new images
+  AboutImage: StaticImageData;
+  Bookeeping: StaticImageData;
+  Accounting: StaticImageData;
+  TaxPlanning: StaticImageData;
+  OutSourced: StaticImageData;
+  Management: StaticImageData;
+  Digital: StaticImageData;
+
+  // who we work with
+  FinancialServices: StaticImageData;
+  HighGrowth: StaticImageData;
+  PropertyDevelopers: StaticImageData;
+  Manufacturing: StaticImageData;
+  Consultancy: StaticImageData;
+  ManagementServices: StaticImageData;
 }
 
 export const EacaImages: ImageData = {
   LogoImage,
   BannerImage,
-  // services imports
-  TaxAccounting,
-  PayrollServices,
-  Bookeeping,
-  BusinessFormation,
-  Compliance,
-  BusinessConsulting,
-  ManagementReports,
-  TaxPlanning,
-
-  // about us images
-  AboutFounder,
-
+  AccountBanner,
   // professional image imports
   Precision,
   Dedication,
@@ -76,4 +72,21 @@ export const EacaImages: ImageData = {
 
   // contact us images
   ContactBanner,
+
+  // new images
+  AboutImage,
+  Bookeeping,
+  Accounting,
+  TaxPlanning,
+  OutSourced,
+  Management,
+  Digital,
+
+  // who we work with
+  FinancialServices,
+  HighGrowth,
+  PropertyDevelopers,
+  Manufacturing,
+  Consultancy,
+  ManagementServices,
 };
