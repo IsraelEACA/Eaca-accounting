@@ -1,46 +1,22 @@
-export const FOOTERHELPERSDATA = [
+export const FOOTERLINKSHELPERDATA = [
   {
-    title: "Services",
-    links: [
-      "Tax Accounting",
-      "Payroll Services",
-      "Business Consulting",
-      "Business Formation",
-      "Tax Planning",
-      "Management Reports",
-    ],
+    linkName: "Home",
+    link: "/",
   },
   {
-    title: "Resources",
-    links: [
-      "About the Professional",
-      "Qualifications",
-      "Accounting Blog",
-      "Tax Tips",
-      "Tax Calendar",
-      "Downloads",
-    ],
+    linkName: "About",
+    link: "/about",
   },
   {
-    title: "Support",
-    links: [
-      "Schedule Consultation",
-      "WhatsApp",
-      "Email",
-      "FAQ",
-      "Hours",
-      "Client Portal",
-    ],
+    linkName: "Services",
+    link: "/services",
   },
   {
-    title: "Legal",
-    links: [
-      "Privacy Policy",
-      "Terms of Service",
-      "Code of Ethics",
-      "Data Protection",
-      "Certifications",
-      "Active CPA",
-    ],
+    linkName: "Pricing",
+    link: "/services",
+  },
+  {
+    linkName: "Contact Us",
+    link: "/contact",
   },
 ];

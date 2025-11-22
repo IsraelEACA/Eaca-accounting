@@ -1,326 +1,424 @@
 "use client";
 
-import { Fragment } from "react/jsx-runtime";
+import React from "react";
 import Image from "next/image";
-import {
-  ChevronRight,
-  CircleCheckBig,
-  GraduationCap,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
-
+import { Check, ChevronRight, Mail, MapPin, Phone } from "lucide-react"; // prettier-ignore
 import { EacaImages } from "@/constant/image";
 import { Button } from "@/components/ui/button";
-import {
-  PROFESSIONALVALUES,
-  SERVICESDATA,
-  WHYCHOOSEUSDATA,
-} from "@/helpers/homepage.helpers";
 import ContactForm from "@/components/others/contact-form";
-import Link from "next/link";
+import {
+  ACCOUNTINGDATA,
+  HOWITWORKSDATA,
+  PRICINGDATA,
+  WHOWEWORKDATA,
+} from "@/helpers/homepage.helpers";
+import { fadeUp, staggerContainer } from "@/components/animations/variants";
+import { motion } from "framer-motion";
 
 export default function Homepage() {
   return (
-    <Fragment>
+    <React.Fragment>
       <HomepageBanner />
       <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1200px] mx-auto">
-        <ComprehensiveServices />
-        <AboutComponent />
-        <ProfessionalValue />
-        <WhyChooseUs />
+        <AboutUsComponents />
+        <HowItWorks />
+        <ServicesComponents />
+        <PricingComponent />
         <ContactUsComponent />
       </div>
-    </Fragment>
+    </React.Fragment>
   );
 }
 
+// export function HomepageBanner() {
+//   return (
+//     <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1150px] mx-auto mt-32">
+//       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+//         <div>
+//           {/* header text */}
+//           <h1 className="text-[48px] sm:text-[56px] md:text-[60px] sm:leading-[70px]">
+//             Reliable <br className="hidden sm:block" /> Accounting That Stirs
+//             Confidence
+//           </h1>
+//           <p className="text-[#717182] leading-7  sm:text-[16px]">
+//             Elevare Advisory & Chartered Accountants provides accounting for
+//             small businesses, sole proprietors, financial services firms,
+//             contractors <br /> and freelancers. We give you clarity in your
+//             numbers and the insight to excel with them
+//           </p>
+//           <div className="flex items-center gap-2 mt-6 w-full">
+//             <Button className="w-3/4 py-6 bg-[#F97316] text-white hover:bg-orange-500 hover:text-[#171717] duration-300 cursor-pointer">
+//               <span>Schedule Consultation</span>
+//               <ChevronRight />
+//             </Button>
+//           </div>
+//         </div>
+//         {/* image grid */}
+//         <div className="relative">
+//           <Image
+//             src={EacaImages.BannerImage}
+//             alt="banner_image"
+//             className="w-full"
+//           />
+//           <div className="inline-block px-6 py-4 bg-white shadow-lg rounded-xl absolute bottom-0">
+//             <p className="text-[#717182] capitalize">Your Partner</p>
+//             <h1 className="text-[#F97316] text-[24px]">{"For Growth"}</h1>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// About us Components
+
 export function HomepageBanner() {
   return (
-    <section className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1150px] mx-auto mt-32">
-      <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-12">
-        <div>
-          {/* header text */}
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1150px] mx-auto mt-32"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <motion.div variants={fadeUp}>
           <h1 className="text-[48px] sm:text-[56px] md:text-[60px] sm:leading-[70px]">
-            <span className="text-[#f97316]">Reliable</span>{" "}
-            <br className="hidden sm:block" /> Accounting That Stirs Confidence
+            Reliable <br className="hidden sm:block" /> Accounting That Stirs
+            Confidence
           </h1>
-          <p className="text-[#717182] leading-7 sm:text-[18px]">
+
+          <motion.p
+            variants={fadeUp}
+            className="text-[#717182] leading-7 sm:text-[16px]"
+          >
             Elevare Advisory & Chartered Accountants provides accounting for
             small businesses, sole proprietors, financial services firms,
-            contractors and freelancers. We give you clarity in your numbers and
-            the insight to excel with them
-          </p>
-          {/* flex bullet points */}
-          <div className="mt-4 text-[#0A0A0A]">
-            <div className="flex items-center gap-3">
-              <CircleCheckBig color="#00C950" size={18} />
-              <p>Strategic financial planning and advisory</p>
-            </div>
-            <div className="flex items-center gap-3 my-5">
-              <CircleCheckBig color="#00C950" size={18} />
-              <p>Comprehensive tax optimization strategies</p>
-            </div>
-            <div className="flex items-center gap-3">
-              <CircleCheckBig color="#00C950" size={18} />
-              <p>Dedicated support for ambitious entrepreneurs</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 mt-6 w-full">
-            <Button className="w-1/2 py-6 bg-[#F97316] text-white hover:bg-orange-500 hover:text-[#171717] duration-300 cursor-pointer">
-              <span>Free Consultation</span>
+            contractors <br /> and freelancers. We give you clarity in your
+            numbers and the insight to excel with them
+          </motion.p>
+
+          <motion.div
+            variants={fadeUp}
+            className="flex items-center gap-2 mt-6 w-full"
+          >
+            <Button className="w-3/4 py-6 bg-[#F97316] text-white hover:bg-orange-600 hover:text-white duration-300 cursor-pointer">
+              <span>Schedule Consultation</span>
               <ChevronRight />
             </Button>
-            <Button className="w-1/2 py-6 bg-transparent text-[#0a0a0a] hover:text-white border border-[#0a0a0a] cursor-pointer">
-              View Services
-            </Button>
-          </div>
-          {/* business statistics */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 items-center gap-8 sm:gap-4 mt-16">
-            <div className="text-center">
-              <h1 className="sm:text-[24px] text-[#f97316]">Chatered</h1>
-              <p className="text-[#717182] text-[14px]">Qualified Accountant</p>
-            </div>
-            <div className="text-center">
-              <h1 className="sm:text-[24px] text-[#f97316]">10+ Years</h1>
-              <p className="text-[#717182] text-[14px]">Experience</p>
-            </div>
-            <div className="text-center col-span-2">
-              <h1 className="sm:text-[24px] text-[#f97316]">100% Online</h1>
-              <p className="text-[#717182] text-[14px]">Remote services</p>
-            </div>
-          </div>
-        </div>
-        {/* image grid */}
-        <div className="relative">
+          </motion.div>
+        </motion.div>
+        <motion.div variants={fadeUp} className="relative">
           <Image
             src={EacaImages.BannerImage}
             alt="banner_image"
             className="w-full"
           />
-          <div className="inline-block px-6 py-4 bg-white shadow-lg rounded-xl absolute right-0 top-0">
-            <p className="text-[#717182] capitalize">Specialization</p>
-            <h1 className="text-[#00C950] text-[24px]">Tax Advisory</h1>
-          </div>
-          <div className="inline-block px-6 py-4 bg-white shadow-lg rounded-xl absolute bottom-0">
+          <motion.div
+            variants={fadeUp}
+            className="inline-block px-6 py-4 bg-white shadow-lg rounded-xl absolute bottom-0"
+          >
             <p className="text-[#717182] capitalize">Your Partner</p>
-            <h1 className="text-[#2B7FFF] text-[24px]">For Growth</h1>
+            <h1 className="text-[#F97316] text-[24px]">{"For Growth"}</h1>
+          </motion.div>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
+
+export function AboutUsComponents() {
+  return (
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      variants={staggerContainer}
+      viewport={{ once: true }}
+      className="my-48"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-start gap-18">
+        {/* LEFT SECTION */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 items-start">
+          <div>
+            <Image
+              src={EacaImages.AboutImage}
+              alt="about_image"
+              width={400}
+              height={300}
+              className="rounded-xl"
+            />
+          </div>
+
+          <div className="">
+            <h1 className="mb-4 text-[24px] font-normal">
+              ‘Seun Adeoye (FCCA, CISA)
+            </h1>
+            <p className="text-[#717182] text-[16px] leading-7">
+              A seasoned Accountant and Auditor with over 10 years experience at
+              leading global Accounting firms including a Big 4 and another Tier
+              1 Accounting firm. His career spans a broad spectrum of
+              industries, with a particular focus on financial services - from
+              large publicly listed corporations to mid-sized enterprises and
+              privately held businesses. <br /> <br /> A Fellow of the
+              Association of Chartered Certified Accountants (FCCA) & a
+              Certified Information System Auditor (CISA).
+            </p>
           </div>
         </div>
+
+        {/* RIGHT SECTION */}
+        <motion.div
+          variants={fadeUp}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 items-start"
+        >
+          {/* Purpose Box */}
+          <motion.div variants={fadeUp} className="border rounded-xl p-6">
+            <div className="bg-[#f97316]/20 p-3 rounded-xl inline-block">
+              <Image
+                src={EacaImages.Precision}
+                alt="purpose_images"
+                width={25}
+                height={25}
+              />
+            </div>
+            <h1 className="text-[24px] lg:text-[24px] font-medium py-4">
+              Our Purpose
+            </h1>
+            <p className="text-[#717182] text-[14px] sm:text-[16px] leading-7">
+              Elevare Advisory & Chartered Accountants was founded to close the
+              gap in expert accounting and advisory services available to small
+              business owners. We recognize that many ambitious entrepreneurs
+              lack access to the high-quality Accounting & Advisory services
+              typically reserved for larger firms - and we are here to change
+              that.
+              <br />
+              <br />
+              By bringing over a decade of experience from top-tier global
+              accounting firms, we deliver trusted, insightful, and
+              growth-focused support tailored to the unique needs of small
+              businesses.
+            </p>
+          </motion.div>
+
+          {/* Mission Box */}
+          <motion.div variants={fadeUp} className="border rounded-xl p-6">
+            <div className="bg-[#f97316]/20 p-3 rounded-xl inline-block">
+              <Image
+                src={EacaImages.Dedication}
+                alt="purpose_images"
+                width={25}
+                height={25}
+              />
+            </div>
+            <h1 className="text-[24px] lg:text-[24px] font-medium py-4">
+              Our Mission
+            </h1>
+            <p className="text-[#717182] text-[14px] sm:text-[16px] leading-7">
+              Our mission is to be your trusted partner - delivering expert,
+              personalized accounting and advisory services that equip SME
+              owners with the clarity, confidence, and strategic insight needed
+              to make sound financial decisions, seize growth opportunities, and
+              build resilient, thriving enterprises.
+            </p>
+          </motion.div>
+        </motion.div>
+      </div>
+    </motion.section>
+  );
+}
+
+export function HowItWorks() {
+  return (
+    <section className="">
+      {/* header contents */}
+      <h1 className="text-center text-[48px]">
+        How we are <span className="text-[#f97316]">different</span>
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 items-start gap-5 pt-8">
+        {HOWITWORKSDATA.map((items, index) => (
+          <div
+            className={`${
+              items?.title === "Our Firm"
+                ? "text-white bg-[#f97316]"
+                : "text-black bg-[#F9F9FB]"
+            } p-5 rounded-xl`}
+            key={index}
+          >
+            <h2 className={`font-semibold border-b pb-2`}>{items?.title}</h2>
+            <div className="">
+              {items.description.map((desc, index) => (
+                <p className="py-4 pb-6" key={index}>
+                  {desc}
+                </p>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="flex items-center justify-center pt-16">
+        <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
+          <span>Get in touch</span>
+          <ChevronRight />
+        </Button>
       </div>
     </section>
   );
 }
 
-export function ComprehensiveServices() {
+export function ServicesComponents() {
   return (
-    <div className="bg-[#ECECF04D] py-12 mt-24 w-full">
-      <div className="text-center">
-        <h1 className="text-[42px] sm:text-[48px]">
-          <span className="text-[#f97316]">Complete</span> Services for your
-          company
-        </h1>
-        <p className="sm:text-[18px] text-[#717182] mt-4">
-          Personalized accounting solutions that accompany your business growth{" "}
-          <br />
-          with safety and efficiency.
-        </p>
-      </div>
-      <div className="services_data grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-12 mx-4 sm:mx-12 mt-12">
-        {SERVICESDATA.map((service, index) => (
-          <div key={index} className="bg-white h-90 p-6 rounded-xl border">
-            <div className="bg-[#f97316]/10 p-4 rounded-xl inline-block">
-              <Image src={service.iconImage} alt={`${service.title} icon`} />
-            </div>
-            <h3 className="text-[18px] font-medium py-3">{service.title}</h3>
-            <p className="text-[16px] text-[#717182] pb-4">
-              {service.description}
-            </p>
-            <ul className="list-disc list-inside marker:text-orange-400 text-[#717182] text-sm space-y-1">
-              {service.features.map((feature, i) => (
-                <li key={i} className="text-[16px]">
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export function AboutComponent() {
-  return (
-    <div className="py-12 mt-12 bg-white">
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
-        <div className="">
-          <div>
-            <h1 className="text-[48px] sm:text-[60px] leading-[66px]">
-              Your partner in <br className="hidden sm:block" />
-              <span className="text-[#F97316]">financial excellence</span>
-            </h1>
-            <p className="text-[#717182] leading-7 sm:text-[18px] sm:text-balance">
-              As a chartered accountant with over 10 years of experience, I
-              specialize in helping ambitious businesses achieve their goals
-              through strategic financial guidance. At Elevare Advisory, we
-              drive bold ambition with clarity.
-              <br />
-              <br />
-              Throughout my career, I have developed deep expertise in tax
-              planning, strategic advisory, and financial optimization. My
-              mission is to provide clarity in complex financial matters,
-              empowering businesses to make bold decisions with confidence.
-              <br />
-              <br />
-              At Elevare Advisory, I am dedicated to building lasting
-              partnerships with ambitious entrepreneurs and business owners,
-              offering expert guidance with individual attention and unwavering
-              commitment to your success.
-            </p>
-          </div>
-          {/* grad experience */}
-          <div className="mt-4">
-            <div className="flex flex-row items-center gap-3">
-              <GraduationCap color="#f97316" />
-              <p>Qualifications and Certifications:</p>
-            </div>
-            {/* about grid items */}
-            <div className="grid sm:grid-cols-2 items-center gap-8 sm:gap-4">
-              <div className="flex items-center gap-3">
-                <CircleCheckBig color="#00C950" size={18} />
-                <p>Chartered Accountant (CA)</p>
-              </div>
-              <div className="flex items-center gap-3 sm:my-5">
-                <CircleCheckBig color="#00C950" size={18} />
-                <p> Bachelor&apos;s in Accounting & Finance</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <CircleCheckBig color="#00C950" size={18} />
-                <p>Specialization in Tax Law</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <CircleCheckBig color="#00C950" size={18} />
-                <p>IFRS Certified</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <CircleCheckBig color="#00C950" size={18} />
-                <p>Advanced Tax Planning</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <CircleCheckBig color="#00C950" size={18} />
-                <p>Continuous Professional Development</p>
-              </div>
-            </div>
-            {/* about scheduling button */}
-            <div className="mt-4">
-              <Link href={"/contact"}>
-                <Button className="w-1/2 py-6 bg-[#F97316] text-white hover:bg-orange-500 hover:text-[#171717] duration-300 cursor-pointer">
-                  <span>Free consultation</span>
-                  <ChevronRight />
-                </Button>
-              </Link>
-            </div>
+    <section className="bg-[#F9F9FB] p-12 mt-24">
+      {/* services banner */}
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div>
+          {/* header text */}
+          <h1 className="text-[32px] sm:text-[32px] md:text-[40px] font-medium">
+            Accounting that stirs confidence
+          </h1>
+          <p className="text-[#717182] leading-7  sm:text-[16px]">
+            We help you make smarter financial decisions with clarity and
+            confidence.
+          </p>
+          <div className="flex items-center gap-2 mt-6 w-full">
+            <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
+              <span>Get in touch</span>
+              <ChevronRight />
+            </Button>
           </div>
         </div>
-        <div className="">
+        {/* image grid */}
+        <div className="relative">
           <Image
-            src={EacaImages.AboutFounder}
-            alt="about-us-image"
+            src={EacaImages.AccountBanner}
+            alt="banner_image"
             className="w-full"
           />
-          <div className="grid grid-cols-2 items-center gap-6 mt-8">
-            <div className="bg-[#ECECF080] py-8 px-3 sm:p-8 rounded-xl flex flex-col items-center justify-center">
-              <h1 className="text-[#F97316] text-[18px] sm:text-[24px]">10+</h1>
-              <p className="text-[#717182] capitalize text-center">
-                Years Experience
-              </p>
-            </div>
-            <div className="bg-[#ECECF080] py-8 px-3 sm:p-8 rounded-xl flex flex-col items-center justify-center">
-              <h1 className="text-[#F97316] text-[18px] sm:text-[24px]">
-                100%
-              </h1>
-              <p className="text-[#717182] capitalize text-center">
-                Client dedication
-              </p>
-            </div>
-            <div className="bg-[#ECECF080] py-8 px-3 sm:p-8 rounded-xl flex flex-col items-center justify-center">
-              <h1 className="text-[#F97316] text-[18px] sm:text-[24px]">24h</h1>
-              <p className="text-[#717182] capitalize text-center">
-                Response time
-              </p>
-            </div>
-            <div className="bg-[#ECECF080] py-8 px-3 sm:p-8 rounded-xl flex flex-col items-center justify-center">
-              <h1 className="text-[#F97316] text-[18px] sm:text-[24px]">
-                Online
-              </h1>
-              <p className="text-[#717182] capitalize text-center">
-                Remote services
-              </p>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
+      <AccountingNeeds />
+      <WhoWeWorkWith />
+    </section>
   );
 }
 
-export function ProfessionalValue() {
+export function AccountingNeeds() {
   return (
-    <div className="mt-16">
-      <div className="text-center mb-16">
-        <h1 className="text-[48px] capitalize">My professional values</h1>
-        <p className="text-[18px] text-[#717182]">
-          The principles that guide my work and define my commitment <br /> to
-          each client.
-        </p>
-      </div>
-      {/* values grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 items-center gap-10 mx-8 xs:mx-12 sm:mx-0">
-        {PROFESSIONALVALUES.map((values, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center justify-center text-center"
-          >
-            <div className="bg-[#f97316]/10 p-6 rounded-full inline-block">
-              <Image src={values.iconImage} alt={`${values.title} icon`} />
+    <div className="my-16">
+      <h1 className="text-[32px] text-center font-medium">
+        Your One-stop shop for all your accounting needs
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        {ACCOUNTINGDATA.map((items, index) => (
+          <div className="bg-white border rounded-xl p-6" key={index}>
+            <div className="bg-[#f97316]/20 p-3 rounded-xl inline-block">
+              <Image src={items?.icon} alt={`accountin_image_${index + 1}`} />
             </div>
-            <p className="text-[18px] text-[#0A0A0A] my-4">{values.title}</p>
-            <p className="text-[16px] text-[#717182]">{values.description}</p>
+            <h1 className="font-medium py-2 pt-6">{items?.title}</h1>
+            <p className="text-[14px] text-[#717182]">{items?.description}</p>
           </div>
         ))}
       </div>
+      <div className="flex items-center justify-center gap-2 mt-6 w-full">
+        <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
+          <span>Get in touch</span>
+          <ChevronRight />
+        </Button>
+      </div>
     </div>
   );
 }
 
-export function WhyChooseUs() {
+export function WhoWeWorkWith() {
   return (
-    <div className="bg-[#ECECF04D] py-12 mt-24 sm:mt-48 w-full">
-      <div className="text-center">
-        <h1 className="text-[42px] sm:text-[48px]">
-          Why choose <span className="text-[#f97316]">Elevare Advisory</span> ?
+    <div className="my-16">
+      <div>
+        <h1 className="text-[40px] text-center font-medium">
+          Who We <span className="text-[#f97316]">Work With</span>
         </h1>
-        <p className="sm:text-[18px] text-[#717182]">
-          Benefits of working with a dedicated, qualified professional committed
-          to your company&apos;s success.
+        <p className="text-[#717182] leading-7 text-center mx-2 sm:mx-8 md:mx-12 lg:mx-24">
+          We work with owner-managed businesses and growth-minded SME owners who
+          value clarity, ambition, and strategic direction. Our mission is to be
+          your trusted advisor and growth partner - supporting you every step of
+          your entrepreneurial journey.
         </p>
+        <div className="flex items-center justify-center gap-2 mt-6 w-full">
+          <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
+            <span>Get in touch</span>
+            <ChevronRight />
+          </Button>
+        </div>
       </div>
-      <div className="services_data grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-12 mx-4 sm:mx-12 mt-12 pb-8 border-b border-b-zinc-200">
-        {WHYCHOOSEUSDATA.map((choose, index) => (
-          <div key={index} className="bg-white h-75 p-6 rounded-xl border">
-            <div className="bg-[#f97316]/10 p-4 rounded-xl inline-block">
-              <Image src={choose.iconImage} alt={`${choose.title} icon`} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        {WHOWEWORKDATA.map((items, index) => (
+          <div className="bg-white border rounded-xl p-4" key={index}>
+            <div className="bg-[#f97316]/20 p-3 rounded-xl inline-block">
+              <Image src={items?.icon} alt={`accountin_image_${index + 1}`} />
             </div>
-            <h3 className="text-[18px] font-medium py-3">{choose.title}</h3>
-            <p className="text-[16px] text-[#717182] pb-4">
-              {choose.description}
-            </p>
+            <h1 className="font-normal text-[18px] text-balance py-2 pt-6">
+              {items?.title}
+            </h1>
           </div>
         ))}
       </div>
     </div>
+  );
+}
+
+// pricing component
+export function PricingComponent() {
+  return (
+    <section className="my-16">
+      <div>
+        <h1 className="text-[32px] sm:text-[36px] text-center font-medium">
+          Fixed, transparent pricing – no surprises, no hidden fees
+        </h1>
+        <p className="text-[#717182] leading-7 text-center mx-2 sm:mx-8 md:mx-24">
+          Each package is curated to support every stage of your business
+          journey. We understand that every business has unique needs , get in
+          touch to discuss any specific requirements tailored to your needs
+        </p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start gap-10 my-12">
+        {PRICINGDATA.map((items, index) => (
+          <div
+            className="bg-white shadow-xl rounded-xl py-6 border h-180"
+            key={index}
+          >
+            <div className="p-6 pb-0 border-b">
+              <h3 className="uppercase">{items?.pricingTitle}</h3>
+              <div className="py-6">
+                <p>From</p>
+                <h1 className="text-[32px] sm:text-[36px] font-medium">
+                  <span>£{items?.pricing}/</span>
+                  <span className="text-[#717182] text-[24px] font-normal">
+                    month
+                  </span>
+                </h1>
+                <p className="text-[#717182] pt-4">
+                  {items?.pricingDescription}
+                </p>
+                <div className="w-full mt-8">
+                  <Button className="w-full bg-transparent text-black border p-5 rounded-xl hover:bg-[#f97316] hover:text-white duration-300 cursor-pointer">
+                    Choose this plan
+                  </Button>
+                </div>
+              </div>
+            </div>
+            <div className="py-6 p-6">
+              <h1 className="uppercase">{items?.pricingData}</h1>
+              {items?.pricingList.map((item, index) => (
+                <div className="flex gap-1 items-start py-3" key={index}>
+                  <p className="bg-[#f97316] p-1 rounded-full text-white inline-block">
+                    <Check size={12} />
+                  </p>
+                  <p className="">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -329,15 +427,13 @@ export function ContactUsComponent() {
   return (
     <div className="mt-32">
       <div className="text-center">
-        <h1 className="text-[48px]">
-          Let&apos;s <span className="text-[#f97316]">Talk</span> ?
-        </h1>
+        <h1 className="text-[48px]">Contact</h1>
         <p className="text-[18px] text-[#717182]">
-          Schedule a free consultation to learn more about our services and
-          discover <br /> how I can help your business grow.
+          Get in touch to discuss your business needs and discover how we can
+          help <br /> you achieve your goals.
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[40%_55%] items-start gap-10 mt-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[45%_45%] items-start gap-10 mt-16">
         <div>
           <ContactForm />
         </div>
@@ -415,15 +511,13 @@ export function ContactUsComponent() {
           </div>
           <div className="contact_informations">
             <div className="contact_cards bg-[#f97316] h-60 p-6 rounded-xl my-8 flex flex-col items-center justify-center gap-4 text-white">
-              <h1 className="text-[24px] font-normal">
-                First consultation Free.
-              </h1>
-              <p className="text-[16px] text-center w-[80%]">
-                Schedule a no-commitment conversation to discuss your
-                company&apos;s needs and learn about our solutions.
+              <h1 className="text-[24px] font-thin">Book an initial call</h1>
+              <p className="text-center py-6 font-thin">
+                Book a brief introductory session to discuss your business needs
+                and how we can best support you
               </p>
               <Button className="bg-white hover:bg-[#0e0e0e] hover:text-white  text-[#0e0e0e] w-full capitalize cursor-pointer py-6 rounded-xl duration-300">
-                Schedule Now
+                Book Now
               </Button>
             </div>
           </div>
