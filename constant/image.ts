@@ -39,6 +39,12 @@ import Versus from "@/public/images/versus.svg";
 import EnoughImageOne from "@/public/images/enough-1.svg";
 import EnoughImageTwo from "@/public/images/enough-2.svg";
 
+// blog posts images
+import TaxPlanningBlog from "@/public/blog/taxplanning.png";
+import Understanding from "@/public/blog/understanding.png";
+import BookeepingBlog from "@/public/blog/bookeeping.png";
+import FinancialManagement from "@/public/blog/financial-management.png";
+
 interface ImageData {
   LogoImage: StaticImageData;
   BannerImage: StaticImageData;
@@ -77,6 +83,12 @@ interface ImageData {
 
   EnoughImageOne: StaticImageData;
   EnoughImageTwo: StaticImageData;
+
+  // blog images
+  TaxPlanningBlog: StaticImageData;
+  Understanding: StaticImageData;
+  BookeepingBlog: StaticImageData;
+  FinancialManagement: StaticImageData;
 }
 
 export const EacaImages: ImageData = {
@@ -118,4 +130,10 @@ export const EacaImages: ImageData = {
 
   EnoughImageOne,
   EnoughImageTwo,
+
+  // blog post images
+  TaxPlanningBlog,
+  Understanding,
+  BookeepingBlog,
+  FinancialManagement,
 };

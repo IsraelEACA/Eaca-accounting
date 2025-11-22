@@ -6,5 +6,5 @@ export { default as Homepages } from "@/pages/homepage";
 export { default as ServicesPage } from "@/pages/service";
 export { default as AboutUsPage } from "@/pages/aboutus";
 export { default as PricingPage } from "@/pages/prices";
-// export { default as BlogPage } from "@/pages/homepage";
+export { default as BlogPage } from "@/pages/blogs/blog";
 export { default as ContactUsPage } from "@/pages/contactUs";
