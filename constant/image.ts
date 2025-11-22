@@ -30,6 +30,15 @@ import Manufacturing from "@/public/images/construction.svg";
 import Consultancy from "@/public/images/consultancy.svg";
 import ManagementServices from "@/public/images/management.svg";
 
+import PenIcon from "@/public/images/pen.svg";
+import Target from "@/public/images/bullet_point.svg";
+import bulb from "@/public/images/bulb.svg";
+import PriceLogo from "@/public/images/price_logo.svg";
+import Versus from "@/public/images/versus.svg";
+
+import EnoughImageOne from "@/public/images/enough-1.svg";
+import EnoughImageTwo from "@/public/images/enough-2.svg";
+
 interface ImageData {
   LogoImage: StaticImageData;
   BannerImage: StaticImageData;
@@ -58,6 +67,16 @@ interface ImageData {
   Manufacturing: StaticImageData;
   Consultancy: StaticImageData;
   ManagementServices: StaticImageData;
+
+  // pricing images
+  PriceLogo: StaticImageData;
+  PenIcon: StaticImageData;
+  bulb: StaticImageData;
+  Target: StaticImageData;
+  Versus: StaticImageData;
+
+  EnoughImageOne: StaticImageData;
+  EnoughImageTwo: StaticImageData;
 }
 
 export const EacaImages: ImageData = {
@@ -89,4 +108,14 @@ export const EacaImages: ImageData = {
   Manufacturing,
   Consultancy,
   ManagementServices,
+
+  // pricing images imports
+  PriceLogo,
+  PenIcon,
+  bulb,
+  Target,
+  Versus,
+
+  EnoughImageOne,
+  EnoughImageTwo,
 };

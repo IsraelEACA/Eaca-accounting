@@ -2,18 +2,21 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Check, ChevronRight, Mail, MapPin, Phone } from "lucide-react"; // prettier-ignore
+
 import { EacaImages } from "@/constant/image";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/others/contact-form";
+import { fadeUp, staggerContainer } from "@/components/animations/variants";
 import {
   ACCOUNTINGDATA,
   HOWITWORKSDATA,
   PRICINGDATA,
   WHOWEWORKDATA,
 } from "@/helpers/homepage.helpers";
-import { fadeUp, staggerContainer } from "@/components/animations/variants";
-import { motion } from "framer-motion";
+
+import EnoughCta from "@/components/others/enough-cta";
 
 export default function Homepage() {
   return (
@@ -22,6 +25,7 @@ export default function Homepage() {
       <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1200px] mx-auto">
         <AboutUsComponents />
         <HowItWorks />
+        <EnoughCta />
         <ServicesComponents />
         <PricingComponent />
         <ContactUsComponent />
@@ -267,7 +271,7 @@ export function HowItWorks() {
 
 export function ServicesComponents() {
   return (
-    <section className="bg-[#F9F9FB] p-12 mt-24">
+    <section className="bg-[#F9F9FB] p-4 pt-12 sm:p-8 md:p-12 mt-24">
       {/* services banner */}
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         <div>
@@ -304,7 +308,7 @@ export function ServicesComponents() {
 export function AccountingNeeds() {
   return (
     <div className="my-16">
-      <h1 className="text-[32px] text-center font-medium">
+      <h1 className="text-[24px] sm:text-[32px] text-center font-medium">
         Your One-stop shop for all your accounting needs
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
@@ -332,10 +336,10 @@ export function WhoWeWorkWith() {
   return (
     <div className="my-16">
       <div>
-        <h1 className="text-[40px] text-center font-medium">
+        <h1 className="text-[24px] sm:text-[40px] text-center font-medium">
           Who We <span className="text-[#f97316]">Work With</span>
         </h1>
-        <p className="text-[#717182] leading-7 text-center mx-2 sm:mx-8 md:mx-12 lg:mx-24">
+        <p className="text-[#717182] leading-7 text-center mx-1 sm:mx-8 md:mx-12 lg:mx-24">
           We work with owner-managed businesses and growth-minded SME owners who
           value clarity, ambition, and strategic direction. Our mission is to be
           your trusted advisor and growth partner - supporting you every step of
@@ -369,7 +373,7 @@ export function PricingComponent() {
   return (
     <section className="my-16">
       <div>
-        <h1 className="text-[32px] sm:text-[36px] text-center font-medium">
+        <h1 className="text-[24px] sm:text-[32px] md:text-[36px] mb-3 text-center font-medium">
           Fixed, transparent pricing – no surprises, no hidden fees
         </h1>
         <p className="text-[#717182] leading-7 text-center mx-2 sm:mx-8 md:mx-24">
@@ -381,7 +385,7 @@ export function PricingComponent() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start gap-10 my-12">
         {PRICINGDATA.map((items, index) => (
           <div
-            className="bg-white shadow-xl rounded-xl py-6 border h-180"
+            className="bg-white shadow-xl rounded-xl py-6 border h-175 md:h-175 lg:h-180"
             key={index}
           >
             <div className="p-6 pb-0 border-b">
@@ -398,7 +402,7 @@ export function PricingComponent() {
                   {items?.pricingDescription}
                 </p>
                 <div className="w-full mt-8">
-                  <Button className="w-full bg-transparent text-black border p-5 rounded-xl hover:bg-[#f97316] hover:text-white duration-300 cursor-pointer">
+                  <Button className="w-full capitalize bg-transparent text-black border p-5 rounded-xl hover:bg-[#f97316] hover:text-white duration-300 cursor-pointer">
                     Choose this plan
                   </Button>
                 </div>
@@ -411,7 +415,7 @@ export function PricingComponent() {
                   <p className="bg-[#f97316] p-1 rounded-full text-white inline-block">
                     <Check size={12} />
                   </p>
-                  <p className="">{item}</p>
+                  <p className="text-[13px] text-[#8F756C]">{item}</p>
                 </div>
               ))}
             </div>
@@ -474,10 +478,10 @@ export function ContactUsComponent() {
               {/* text contents */}
               <div className="">
                 <h1 className="text-[#0e0e0e] text-[18px]">Email:</h1>
-                <p className="text-[#717182] text-[16px]">
+                <p className="text-[#717182] text-[14px] sm:text-[16px]">
                   contact@elavareadvisory.com
                 </p>
-                <p className="text-[#717182] text-[16px]">
+                <p className="text-[#717182] text-[14px]  sm:text-[16px]">
                   Response withing 24h
                 </p>
               </div>
