@@ -34,48 +34,6 @@ export default function Homepage() {
   );
 }
 
-// export function HomepageBanner() {
-//   return (
-//     <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1150px] mx-auto mt-32">
-//       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-//         <div>
-//           {/* header text */}
-//           <h1 className="text-[48px] sm:text-[56px] md:text-[60px] sm:leading-[70px]">
-//             Reliable <br className="hidden sm:block" /> Accounting That Stirs
-//             Confidence
-//           </h1>
-//           <p className="text-[#717182] leading-7  sm:text-[16px]">
-//             Elevare Advisory & Chartered Accountants provides accounting for
-//             small businesses, sole proprietors, financial services firms,
-//             contractors <br /> and freelancers. We give you clarity in your
-//             numbers and the insight to excel with them
-//           </p>
-//           <div className="flex items-center gap-2 mt-6 w-full">
-//             <Button className="w-3/4 py-6 bg-[#F97316] text-white hover:bg-orange-500 hover:text-[#171717] duration-300 cursor-pointer">
-//               <span>Schedule Consultation</span>
-//               <ChevronRight />
-//             </Button>
-//           </div>
-//         </div>
-//         {/* image grid */}
-//         <div className="relative">
-//           <Image
-//             src={EacaImages.BannerImage}
-//             alt="banner_image"
-//             className="w-full"
-//           />
-//           <div className="inline-block px-6 py-4 bg-white shadow-lg rounded-xl absolute bottom-0">
-//             <p className="text-[#717182] capitalize">Your Partner</p>
-//             <h1 className="text-[#F97316] text-[24px]">{"For Growth"}</h1>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// About us Components
-
 export function HomepageBanner() {
   return (
     <motion.div
@@ -516,7 +474,7 @@ export function ContactUsComponent() {
           <div className="contact_informations">
             <div className="contact_cards bg-[#f97316] h-60 p-6 rounded-xl my-8 flex flex-col items-center justify-center gap-4 text-white">
               <h1 className="text-[24px] font-thin">Book an initial call</h1>
-              <p className="text-center py-6 font-thin">
+              <p className="text-center py-2 sm:py-4 font-thin">
                 Book a brief introductory session to discuss your business needs
                 and how we can best support you
               </p>

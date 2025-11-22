@@ -41,12 +41,12 @@ export default function EnoughCta() {
         <Image
           src={EacaImages.EnoughImageOne}
           alt="enough_image_one"
-          className="absolute -bottom-10 -left-10 w-35 sm:w-46 z-100"
+          className="absolute -bottom-10 -left-10 w-35 sm:w-46"
         />
         <Image
           src={EacaImages.EnoughImageTwo}
           alt="enough_image_one"
-          className="absolute bottom-0 right-0 w-35 sm:w-46 z-1000"
+          className="absolute bottom-0 right-0 w-35 sm:w-46"
         />
       </div>
     </section>
