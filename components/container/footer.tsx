@@ -18,15 +18,17 @@ export default function footer() {
     <div className="border-t border-t-zinc-200 pt-8">
       <footer className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1200px] mx-auto">
         {/* main footer */}
-        <div className="flex justify-between items-start py-8">
-          <div className="">
-            <Image
-              src={EacaImages.LogoImage}
-              alt="footer_logo"
-              className="py-4"
-            />
+        <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-10 sm:gap-0 py-8">
+          <div>
+            <div className="flex items-center justify-center sm:justify-start">
+              <Image
+                src={EacaImages.LogoImage}
+                alt="footer_logo"
+                className="py-4"
+              />
+            </div>
             {/* company footer information */}
-            <div className="location py-4">
+            <div className="location py-4 flex flex-col items-center sm:items-start">
               <div className="flex gap-4 items-center">
                 <Phone size={18} color="#f97316" />
                 <p>+1 (555) 123-4567</p>
@@ -43,7 +45,7 @@ export default function footer() {
               <Linkedin size={18} />
             </div>
           </div>
-          <div className="leading-10 text-right">
+          <div className="leading-10 text-center sm:text-right">
             {FOOTERLINKSHELPERDATA.map((items, index) => (
               <Link href={items?.link} key={index}>
                 <p>{items?.linkName}</p>
@@ -57,7 +59,7 @@ export default function footer() {
             © 2025 Elevare Advisory & Chartered Accountants. All rights
             reserved.
           </p>
-          <div className="flex items-center gap-32">
+          <div className="flex items-center gap-12 sm:gap-32">
             <p className="hover:text-orange-400 duration-300 underline">
               Policy
             </p>

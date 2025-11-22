@@ -169,3 +169,30 @@ export const PRICINGDATA = [
     ],
   },
 ];
+
+export const PRICINGCOMPARISONDATA = [
+  {
+    title: "How we work",
+    description: [
+      "Open, responsive, and collaborative approach.",
+      "Tailored solutions aligned with your business goals",
+      "clear, fixed pricing. No surprises!",
+      "High-quality accounting plus strategic business advice",
+      "Smart automation that frees time for value creation",
+      "Invested in your business growth and long-term success",
+      "We partner with driven, growth-oriented SMEs",
+    ],
+  },
+  {
+    title: "How others work",
+    description: [
+      "Limited contact, mostly one-sided",
+      "One-size-fits-all approach",
+      "Hourly rates with hidden fees",
+      "Basic compliance services",
+      "Manual, paper-heavy processes",
+      "Focused on reporting",
+      "Works with any client",
+    ],
+  },
+];

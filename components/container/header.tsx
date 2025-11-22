@@ -20,11 +20,13 @@ export default function Header() {
       <div className="max-w-[90%] xl:max-w-[1150px] mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <Image
-            src={EacaImages.LogoImage}
-            alt="logo_image"
-            className="w-[120px] sm:w-[150px]"
-          />
+          <Link href={"/"}>
+            <Image
+              src={EacaImages.LogoImage}
+              alt="logo_image"
+              className="w-[120px] sm:w-[150px]"
+            />
+          </Link>
         </div>
 
         {/* Desktop Menu */}
