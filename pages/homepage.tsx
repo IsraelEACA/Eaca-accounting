@@ -121,7 +121,7 @@ export function AboutUsComponents() {
           <div className="">
             <div className="mb-4">
               <h1 className="text-[24px] font-normal">
-                Seun Adeoye (FCCA, CISA)
+                ‘Seun Adeoye (FCCA, CISA)
               </h1>
               <p>Founder</p>
             </div>
@@ -414,7 +414,7 @@ export function PricingComponent() {
           variants={slideUp}
           className="text-[24px] sm:text-[32px] md:text-[36px] mb-3 text-center font-medium"
         >
-          Fixed, transparent pricing – no surprises, no hidden fees
+          Fixed, transparent pricing – no surprises, no hidden fees.
         </motion.h1>
         <p className="text-[#717182] leading-7 text-center mx-2 sm:mx-8 md:mx-24">
           Each package is curated to support every stage of your business
@@ -422,7 +422,7 @@ export function PricingComponent() {
           touch to discuss any specific requirements tailored to your needs.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-10 my-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-4 xl:gap-10 my-12">
         {PRICINGDATA.map((items, index) => (
           <motion.div
             initial="hidden"
@@ -541,24 +541,13 @@ export function ContactUsComponent() {
               <div className="">
                 <h1 className="text-[#0e0e0e] text-[18px]">Email:</h1>
                 <p className="text-[#717182] text-[14px] sm:text-[16px]">
-                  contact@elavareadvisory.com
+                  contact@eaca.co.uk
                 </p>
                 <p className="text-[#717182] text-[14px]  sm:text-[16px]">
                   Response within 24h
                 </p>
               </div>
             </div>
-            {/* services information */}
-            {/* <div className="flex gap-8 items-center border border-zinc-200 bg-white rounded-xl w-full p-4">
-              <div className="bg-[#f97316]/10 text-[#f97316] p-4 rounded-sm">
-                <MapPin size={16} />
-              </div>
-              <div className="">
-                <h1 className="text-[#0e0e0e] text-[18px]">Services:</h1>
-                <p className="text-[#717182] text-[16px]">100% Online</p>
-                <p className="text-[#717182] text-[16px]">Nationwide</p>
-              </div>
-            </div> */}
             {/* hours available */}
             <div className="flex gap-8 items-center border border-zinc-200 bg-white rounded-xl w-full p-4">
               {/* icon */}

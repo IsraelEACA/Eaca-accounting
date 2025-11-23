@@ -35,10 +35,10 @@ export function PriceComparisonComponents() {
           <Image src={EacaImages.PriceLogo} alt="pricing_logo" />
           {PRICINGCOMPARISONDATA.slice(0, 1).map((items, index) => (
             <div
-              className="text-[#050038] mt-12 relative pl-3 sm:p-8 lg:p-4 pt-4 border-t-2 border-b-8 border-r-8 border-l-4 border-[#f97316]  rounded-xl"
+              className="text-[#050038] mt-12 relative pl-3 sm:p-8 lg:p-4 lg:pr-0 pt-4 border-t-2 border-b-8 border-r-8 border-l-2 border-[#f97316]  rounded-xl"
               key={index}
             >
-              <h1 className="py-4 lg:pb-12 text-[18px] uppercase font-bold">
+              <h1 className="py-4 lg:pb-8 text-[18px] uppercase font-bold">
                 {items?.title}
               </h1>
               <div className="flex flex-row">
@@ -58,9 +58,13 @@ export function PriceComparisonComponents() {
                     className="absolute top-[50%] left-0"
                   />
                 </div>
-                <div className="flex flex-col justify-between">
+                <div className="flex flex-col justify-between absolute right-0">
                   <Image src={EacaImages.bulb} alt="bulb" />
-                  <Image src={EacaImages.PenIcon} alt="pen" />
+                  <Image
+                    src={EacaImages.PenIcon}
+                    alt="pen"
+                    className="absolute top-100"
+                  />
                 </div>
               </div>
             </div>
@@ -73,21 +77,21 @@ export function PriceComparisonComponents() {
         <div>
           {/* other chattered Accountants */}
           <h1 className="text-[#050038] pb-4 text-center xl:text-left text-[32px] font-semibold">
-            Other chattered <br className="block sm:hidden" /> Accountants
+            Other Chartered <br className="block sm:hidden" /> Accountants
           </h1>
           {PRICINGCOMPARISONDATA.slice(1, 2).map((items, index) => (
             <div
-              className="text-[#050038] lg:mt-12 xl:mt-12 relative pl-3 sm:p-8 lg:p-4 pt-4 border-t-2 border-b-8 border-r-8 border-l-4 border-[#E20000] rounded-xl"
+              className="text-[#050038] lg:mt-12 xl:mt-13 relative pl-3 sm:p-8 lg:p-4 pt-4 border-t-2 border-b-8 border-r-8 border-l-2 border-[#E20000] rounded-xl"
               key={index}
             >
-              <h1 className="py-4 pb-12 text-[18px] uppercase font-bold">
+              <h1 className="py-4 lg:pb-8 text-[18px] uppercase font-bold">
                 {items?.title}
               </h1>
               <div className="flex flex-row">
                 <div className="relative flex-1 lg:flex-none">
                   {items?.description.map((list, index) => (
                     <p
-                      className="pb-14 lg:pb-16 xl:pb-[58px] flex items-center gap-2"
+                      className="pb-12 lg:pb-[51px] flex items-center gap-2"
                       key={index}
                     >
                       <CircleX color="#E20000" />
