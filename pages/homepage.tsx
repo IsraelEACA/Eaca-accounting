@@ -8,7 +8,7 @@ import { Check, ChevronRight, Mail, MapPin, Phone } from "lucide-react"; // pret
 import { EacaImages } from "@/constant/image";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/others/contact-form";
-import { fadeUp, staggerContainer } from "@/components/animations/variants";
+import { fadeUp, scaleIn, slideUp } from "@/components/animations/variants";
 import {
   ACCOUNTINGDATA,
   HOWITWORKSDATA,
@@ -37,7 +37,7 @@ export default function Homepage() {
 export function HomepageBanner() {
   return (
     <motion.div
-      variants={staggerContainer}
+      variants={fadeUp}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -70,14 +70,14 @@ export function HomepageBanner() {
             </Button>
           </motion.div>
         </motion.div>
-        <motion.div variants={fadeUp} className="relative">
+        <motion.div variants={slideUp} className="relative">
           <Image
             src={EacaImages.BannerImage}
             alt="banner_image"
             className="w-full"
           />
           <motion.div
-            variants={fadeUp}
+            variants={scaleIn}
             className="inline-block px-6 py-4 bg-white shadow-lg rounded-xl absolute bottom-0"
           >
             <p className="text-[#717182] capitalize">Your Partner</p>
@@ -94,13 +94,17 @@ export function AboutUsComponents() {
     <motion.section
       initial="hidden"
       whileInView="visible"
-      variants={staggerContainer}
+      variants={fadeUp}
       viewport={{ once: true }}
       className="my-48"
     >
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-start gap-18">
         {/* LEFT SECTION */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 items-start">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 items-start"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-center"
+        >
           <div>
             <Image
               src={EacaImages.AboutImage}
@@ -191,14 +195,24 @@ export function AboutUsComponents() {
 
 export function HowItWorks() {
   return (
-    <section className="">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      variants={fadeUp}
+      viewport={{ once: true }}
+      className=""
+    >
       {/* header contents */}
-      <h1 className="text-center text-[48px]">
+      <h1 className="text-center text-[48px]" data-aos={"fade-up"}>
         How we are <span className="text-[#f97316]">different</span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 items-start gap-5 pt-8">
         {HOWITWORKSDATA.map((items, index) => (
-          <div
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={slideUp}
+            viewport={{ once: true }}
             className={`${
               items?.title === "Our Firm"
                 ? "text-white bg-[#f97316]"
@@ -214,7 +228,7 @@ export function HowItWorks() {
                 </p>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
       <div className="flex items-center justify-center pt-16">
@@ -223,13 +237,19 @@ export function HowItWorks() {
           <ChevronRight />
         </Button>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
 export function ServicesComponents() {
   return (
-    <section className="bg-[#F9F9FB] p-4 pt-12 sm:p-8 md:p-12 mt-24">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      variants={fadeUp}
+      viewport={{ once: true }}
+      className="bg-[#F9F9FB] p-4 pt-12 sm:p-8 md:p-12 mt-24"
+    >
       {/* services banner */}
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         <div>
@@ -249,35 +269,54 @@ export function ServicesComponents() {
           </div>
         </div>
         {/* image grid */}
-        <div className="relative">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={slideUp}
+          viewport={{ once: true }}
+          className="relative"
+        >
           <Image
             src={EacaImages.AccountBanner}
             alt="banner_image"
             className="w-full"
           />
-        </div>
+        </motion.div>
       </div>
       <AccountingNeeds />
       <WhoWeWorkWith />
-    </section>
+    </motion.section>
   );
 }
 
 export function AccountingNeeds() {
   return (
     <div className="my-16">
-      <h1 className="text-[24px] sm:text-[32px] text-center font-medium">
+      <motion.h1
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={slideUp}
+        className="text-[24px] sm:text-[32px] text-center font-medium"
+      >
         Your One-stop shop for all your accounting needs
-      </h1>
+      </motion.h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         {ACCOUNTINGDATA.map((items, index) => (
-          <div className="bg-white border rounded-xl p-6" key={index}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={slideUp}
+            viewport={{ once: true }}
+            className="bg-white border rounded-xl p-6"
+            key={index}
+          >
             <div className="bg-[#f97316]/20 p-3 rounded-xl inline-block">
               <Image src={items?.icon} alt={`accountin_image_${index + 1}`} />
             </div>
             <h1 className="font-medium py-2 pt-6">{items?.title}</h1>
             <p className="text-[14px] text-[#717182]">{items?.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
       <div className="flex items-center justify-center gap-2 mt-6 w-full">
@@ -293,7 +332,12 @@ export function AccountingNeeds() {
 export function WhoWeWorkWith() {
   return (
     <div className="my-16">
-      <div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeUp}
+        viewport={{ once: true }}
+      >
         <h1 className="text-[24px] sm:text-[40px] text-center font-medium">
           Who We <span className="text-[#f97316]">Work With</span>
         </h1>
@@ -309,17 +353,24 @@ export function WhoWeWorkWith() {
             <ChevronRight />
           </Button>
         </div>
-      </div>
+      </motion.div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         {WHOWEWORKDATA.map((items, index) => (
-          <div className="bg-white border rounded-xl p-4" key={index}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={slideUp}
+            className="bg-white border rounded-xl p-4"
+            key={index}
+          >
             <div className="bg-[#f97316]/20 p-3 rounded-xl inline-block">
               <Image src={items?.icon} alt={`accountin_image_${index + 1}`} />
             </div>
             <h1 className="font-normal text-[18px] text-balance py-2 pt-6">
               {items?.title}
             </h1>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
@@ -329,11 +380,23 @@ export function WhoWeWorkWith() {
 // pricing component
 export function PricingComponent() {
   return (
-    <section className="my-16">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      variants={fadeUp}
+      viewport={{ once: true }}
+      className="my-16"
+    >
       <div>
-        <h1 className="text-[24px] sm:text-[32px] md:text-[36px] mb-3 text-center font-medium">
+        <motion.h1
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={slideUp}
+          className="text-[24px] sm:text-[32px] md:text-[36px] mb-3 text-center font-medium"
+        >
           Fixed, transparent pricing – no surprises, no hidden fees
-        </h1>
+        </motion.h1>
         <p className="text-[#717182] leading-7 text-center mx-2 sm:mx-8 md:mx-24">
           Each package is curated to support every stage of your business
           journey. We understand that every business has unique needs , get in
@@ -342,7 +405,11 @@ export function PricingComponent() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start gap-10 my-12">
         {PRICINGDATA.map((items, index) => (
-          <div
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={slideUp}
+            viewport={{ once: true }}
             className="bg-white shadow-xl rounded-xl py-6 border h-175 md:h-175 lg:h-180"
             key={index}
           >
@@ -377,10 +444,10 @@ export function PricingComponent() {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
 
