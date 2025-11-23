@@ -24,12 +24,12 @@ export const HOWITWORKSDATA = [
     title: "What sets us apart",
     description: [
       "Two-way communication",
-      "personalized service",
+      "Personalized service",
       "Transparent fixed pricing",
       "Premium quality & add-on busines advisory",
       "Tech-enabled efficiency",
-      "client growth as success metric",
-      "Ambitious client focus",
+      "Client growth as success metric",
+      "Ambitious client focused",
     ],
   },
   {
@@ -37,11 +37,11 @@ export const HOWITWORKSDATA = [
     description: [
       "Open, responsive, and collaborative approach",
       "Tailored solutions aligned with your business goals",
-      "clear, fixed pricing. No surprises!",
+      "Clear, fixed pricing. No surprises!",
       "High-quality accounting plus strategic business advice",
       "Smart automation that frees time for value creation",
       "Invested in your business growth and long-term success",
-      "we partner with driven, growth-oriented SMEs",
+      "We partner with driven, growth-oriented SMEs",
     ],
   },
   {
@@ -53,7 +53,7 @@ export const HOWITWORKSDATA = [
       "Basic compliance services  ",
       "Manual, paper-heavy processes",
       "Focus on reporting",
-      "works with any client",
+      "Works with any client",
     ],
   },
 ];
@@ -134,11 +134,11 @@ export const PRICINGDATA = [
   {
     pricingTitle: "Foundation Plan",
     pricing: "250",
-    pricingDescription:
-      "For new/small-owner managed businesses Stay compliant & on top of your finances",
+    pricingTag: "For new/small owner managed businesses.",
+    pricingDescription: "Stay compliant & on top of your finances.",
     pricingData: "Everything included",
     pricingList: [
-      "weekly bookkeeping",
+      "Weekly bookkeeping",
       "VAT returns",
       "Annual accounts preparation",
       "Tax planning and review",
@@ -149,17 +149,19 @@ export const PRICINGDATA = [
   {
     pricingTitle: "Momentum Plan",
     pricing: "450",
+    pricingTag: "For growing companies.",
     pricingDescription:
-      "Collaborating with you to make smart business decisions",
+      "Collaborating with you to make smart business decisions.",
     pricingData: "Everything in foundation plan plus;",
     pricingList: ["Quarterly reporting", "Annual business review reports"],
   },
   {
     pricingTitle: "Ascent Plan",
     pricing: "850",
+    pricingTag: "For larger companies.",
     pricingDescription:
-      " Get an outsourced Finance  Partner & controller for your business",
-    pricingData: "Everything in Monumental plan plus;",
+      " Get an outsourced Finance  Partner & controller for your business.",
+    pricingData: "Everything in Momentum plan plus;",
     pricingList: [
       "Payroll services",
       "Monthly management accounts",
@@ -176,7 +178,7 @@ export const PRICINGCOMPARISONDATA = [
     description: [
       "Open, responsive, and collaborative approach.",
       "Tailored solutions aligned with your business goals",
-      "clear, fixed pricing. No surprises!",
+      "Clear, fixed pricing. No surprises!",
       "High-quality accounting plus strategic business advice",
       "Smart automation that frees time for value creation",
       "Invested in your business growth and long-term success",

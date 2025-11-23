@@ -6,6 +6,15 @@ import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { MessageCircle, Send } from "lucide-react";
 import { Textarea } from "../ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectTrigger,
+  SelectValue,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+} from "../ui/select"; // prettier-ignore
 
 export default function ContactForm({
   ...props
@@ -40,7 +49,7 @@ export default function ContactForm({
                 />
               </Field>
               <Field>
-                <FieldLabel htmlFor="name">Full Name</FieldLabel>
+                <FieldLabel htmlFor="name">Company</FieldLabel>
                 <Input
                   id="company-name"
                   type="text"
@@ -74,6 +83,32 @@ export default function ContactForm({
                 />
               </Field>
             </div>
+            <div>
+              <FieldLabel className="pb-3">Service of interest</FieldLabel>
+              <Select>
+                <SelectTrigger className="w-full cursor-pointer bg-[#F3F3F5]">
+                  <SelectValue placeholder="Service of interest" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Services</SelectLabel>
+                    <SelectItem value="tax-planning">Tax planning</SelectItem>
+                    <SelectItem value="book-keeping">Book keeping</SelectItem>
+                    <SelectItem value="accounting">Accounting</SelectItem>
+                    <SelectItem value="finance">
+                      Out sourced finance team
+                    </SelectItem>
+                    <SelectItem value="management-account">
+                      Management accounts
+                    </SelectItem>
+                    <SelectItem value="digital-transformation">
+                      Digital Transformation
+                    </SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            </div>
+
             <Field>
               <FieldLabel htmlFor="message">Message</FieldLabel>
               <Textarea placeholder="Your message" className="bg-[#f3f3f5]" />
@@ -90,6 +125,11 @@ export default function ContactForm({
               </Field>
             </FieldGroup>
           </FieldGroup>
+          <div>
+            <p className="mt-6 text-[#717182]">
+              Your data is secure and will not be shared with third parties.
+            </p>
+          </div>
         </form>
       </CardContent>
     </Card>
