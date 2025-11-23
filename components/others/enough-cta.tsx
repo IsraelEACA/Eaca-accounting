@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { EacaImages } from "@/constant/image";
 import Image from "next/image";
 import { fadeUp, scaleIn, slideUp } from "../animations/variants";
+import Link from "next/link";
 
 export default function EnoughCta() {
   return (
@@ -40,10 +41,12 @@ export default function EnoughCta() {
             manage and maximize your business potentials.
           </motion.p>
           <div className="flex items-center justify-center gap-2 mt-6 w-full">
-            <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
-              <span>Get in touch</span>
-              <ChevronRight />
-            </Button>
+            <Link href="/contact">
+              <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
+                <span>Get in touch</span>
+                <ChevronRight />
+              </Button>
+            </Link>
           </div>
         </div>
         <Image

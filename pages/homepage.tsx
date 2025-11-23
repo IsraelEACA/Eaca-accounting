@@ -17,6 +17,7 @@ import {
 } from "@/helpers/homepage.helpers";
 
 import EnoughCta from "@/components/others/enough-cta";
+import Link from "next/link";
 
 export default function Homepage() {
   return (
@@ -60,15 +61,17 @@ export function HomepageBanner() {
             numbers and the insight to excel with them
           </motion.p>
 
-          <motion.div
-            variants={fadeUp}
-            className="flex items-center gap-2 mt-6 w-full"
-          >
-            <Button className="w-3/4 py-6 bg-[#F97316] text-white hover:bg-orange-600 hover:text-white duration-300 cursor-pointer">
-              <span>Schedule Consultation</span>
-              <ChevronRight />
-            </Button>
-          </motion.div>
+          <Link href={"/contact"}>
+            <motion.div
+              variants={fadeUp}
+              className="flex items-center gap-2 mt-6 w-full"
+            >
+              <Button className="w-3/4 py-6 bg-[#F97316] text-white hover:bg-orange-600 hover:text-white duration-300 cursor-pointer">
+                <span>Schedule Consultation</span>
+                <ChevronRight />
+              </Button>
+            </motion.div>
+          </Link>
         </motion.div>
         <motion.div variants={slideUp} className="relative">
           <Image
@@ -116,9 +119,12 @@ export function AboutUsComponents() {
           </div>
 
           <div className="">
-            <h1 className="mb-4 text-[24px] font-normal">
-              ‘Seun Adeoye (FCCA, CISA)
-            </h1>
+            <div className="mb-4">
+              <h1 className="text-[24px] font-normal">
+                Seun Adeoye (FCCA, CISA)
+              </h1>
+              <p>Founder</p>
+            </div>
             <p className="text-[#717182] text-[16px] leading-7">
               A seasoned Accountant and Auditor with over 10 years experience at
               leading global Accounting firms including a Big 4 and another Tier
@@ -217,13 +223,16 @@ export function HowItWorks() {
               items?.title === "Our Firm"
                 ? "text-white bg-[#f97316]"
                 : "text-black bg-[#F9F9FB]"
-            } p-5 rounded-xl`}
+            } p-5 rounded-xl border`}
             key={index}
           >
-            <h2 className={`font-semibold border-b pb-2`}>{items?.title}</h2>
+            <h2 className={`font-semibold pb-2`}>{items?.title}</h2>
             <div className="">
               {items.description.map((desc, index) => (
-                <p className="py-4 pb-6" key={index}>
+                <p
+                  className="py-4 pt-6 border-t border-t-[#d2d2d267]"
+                  key={index}
+                >
                   {desc}
                 </p>
               ))}
@@ -232,10 +241,12 @@ export function HowItWorks() {
         ))}
       </div>
       <div className="flex items-center justify-center pt-16">
-        <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
-          <span>Get in touch</span>
-          <ChevronRight />
-        </Button>
+        <Link href="/contact">
+          <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
+            <span>Get in touch</span>
+            <ChevronRight />
+          </Button>
+        </Link>
       </div>
     </motion.section>
   );
@@ -262,10 +273,12 @@ export function ServicesComponents() {
             confidence.
           </p>
           <div className="flex items-center gap-2 mt-6 w-full">
-            <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
-              <span>Get in touch</span>
-              <ChevronRight />
-            </Button>
+            <Link href="/contact">
+              <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
+                <span>Get in touch</span>
+                <ChevronRight />
+              </Button>
+            </Link>
           </div>
         </div>
         {/* image grid */}
@@ -320,10 +333,12 @@ export function AccountingNeeds() {
         ))}
       </div>
       <div className="flex items-center justify-center gap-2 mt-6 w-full">
-        <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
-          <span>Get in touch</span>
-          <ChevronRight />
-        </Button>
+        <Link href="/contact">
+          <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
+            <span>Get in touch</span>
+            <ChevronRight />
+          </Button>
+        </Link>
       </div>
     </div>
   );
@@ -348,10 +363,12 @@ export function WhoWeWorkWith() {
           your entrepreneurial journey.
         </p>
         <div className="flex items-center justify-center gap-2 mt-6 w-full">
-          <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
-            <span>Get in touch</span>
-            <ChevronRight />
-          </Button>
+          <Link href="/contact">
+            <Button className="flex items-center justify-between py-6 rounded-xl bg-[#f97316] text-white cursor-pointer hover:bg-orange-500 duration-300">
+              <span>Get in touch</span>
+              <ChevronRight />
+            </Button>
+          </Link>
         </div>
       </motion.div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
@@ -400,34 +417,43 @@ export function PricingComponent() {
         <p className="text-[#717182] leading-7 text-center mx-2 sm:mx-8 md:mx-24">
           Each package is curated to support every stage of your business
           journey. We understand that every business has unique needs , get in
-          touch to discuss any specific requirements tailored to your needs
+          touch to discuss any specific requirements tailored to your needs.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start gap-10 my-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-10 my-12">
         {PRICINGDATA.map((items, index) => (
           <motion.div
             initial="hidden"
             whileInView="visible"
             variants={slideUp}
             viewport={{ once: true }}
-            className="bg-white shadow-xl rounded-xl py-6 border h-175 md:h-175 lg:h-180"
+            className="bg-white shadow-xl rounded-xl py-6 border h-175 sm:h-185 lg:h-185"
             key={index}
           >
             <div className="p-6 pb-0 border-b">
-              <h3 className="uppercase">{items?.pricingTitle}</h3>
+              <h3 className="uppercase text-[18px] font-semibold">
+                {items?.pricingTitle}
+              </h3>
               <div className="py-6">
                 <p>From</p>
-                <h1 className="text-[32px] sm:text-[36px] font-medium">
-                  <span>£{items?.pricing}/</span>
-                  <span className="text-[#717182] text-[24px] font-normal">
-                    month
+                <h1 className="text-[36px] sm:text-[36px] font-bold">
+                  <span>£{items?.pricing}</span>
+                  <span className="text-[#717182] text-[24px] font-semibold">
+                    <i className="text-[18px] font-extrabold">/</i> mo
                   </span>
                 </h1>
+                <p className="text-[#717182] pt-4">{items?.pricingTag}</p>
                 <p className="text-[#717182] pt-4">
                   {items?.pricingDescription}
                 </p>
                 <div className="w-full mt-8">
-                  <Button className="w-full capitalize bg-transparent text-black border p-5 rounded-xl hover:bg-[#f97316] hover:text-white duration-300 cursor-pointer">
+                  <Button
+                    className={`${
+                      items?.pricingTitle === "Momentum Plan"
+                        ? "bg-[#f97316] text-white"
+                        : "bg-transparent text-black"
+                    } w-full capitalize border p-5 rounded-xl hover:bg-[#f97316] hover:text-white duration-300 cursor-pointer`}
+                  >
                     Choose this plan
                   </Button>
                 </div>
@@ -507,23 +533,21 @@ export function ContactUsComponent() {
                   contact@elavareadvisory.com
                 </p>
                 <p className="text-[#717182] text-[14px]  sm:text-[16px]">
-                  Response withing 24h
+                  Response within 24h
                 </p>
               </div>
             </div>
             {/* services information */}
-            <div className="flex gap-8 items-center border border-zinc-200 bg-white rounded-xl w-full p-4">
-              {/* icon */}
+            {/* <div className="flex gap-8 items-center border border-zinc-200 bg-white rounded-xl w-full p-4">
               <div className="bg-[#f97316]/10 text-[#f97316] p-4 rounded-sm">
                 <MapPin size={16} />
               </div>
-              {/* text contents */}
               <div className="">
                 <h1 className="text-[#0e0e0e] text-[18px]">Services:</h1>
                 <p className="text-[#717182] text-[16px]">100% Online</p>
                 <p className="text-[#717182] text-[16px]">Nationwide</p>
               </div>
-            </div>
+            </div> */}
             {/* hours available */}
             <div className="flex gap-8 items-center border border-zinc-200 bg-white rounded-xl w-full p-4">
               {/* icon */}

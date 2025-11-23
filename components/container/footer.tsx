@@ -35,7 +35,7 @@ export default function footer() {
               </div>
               <div className="flex gap-4 items-center py-3">
                 <Mail size={18} color="#f97316" />
-                <p>contact@elavareadvisory.com</p>
+                <p>contact@eaca.co.uk</p>
               </div>
             </div>
             <div className="social_icons flex gap-12 items-center pt-4">
@@ -56,12 +56,11 @@ export default function footer() {
         {/* copy right */}
         <div className="text-black flex flex-col-reverse sm:flex-row justify-between items-center gap-10 sm:gap-0 py-6">
           <p className="text-center sm:text-left">
-            © 2025 Elevare Advisory & Chartered Accountants. All rights
-            reserved.
+            © All rights reserved Elevare Advisory & Chartered Accountants
           </p>
           <div className="flex items-center gap-12 sm:gap-32">
             <p className="hover:text-orange-400 duration-300 underline">
-              Policy
+              Privacy Policy
             </p>
             <p className="hover:text-orange-400 duration-300 underline">
               Terms of use

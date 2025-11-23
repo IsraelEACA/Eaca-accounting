@@ -3,6 +3,7 @@
 import { BLOGHELPERSDATA } from "@/helpers/blog-helpers";
 import { Calendar, Clock8 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function BlogComponents() {
@@ -80,31 +81,41 @@ export function BlogPosts() {
       <article>
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 items-start mt-16">
           {filteredBlogs.map((items, index) => (
-            <div className="border rounded-xl" key={index}>
-              <Image src={items.image} alt="" className="rounded-t-xl w-full" />
-              <div className="p-8">
-                <p className="bg-[#ECEEF2] text-[#0a0a0a] inline-block p-1 px-4 cursor-pointer rounded-full text-[12px] mb-4">
-                  {items.category}
-                </p>
-                <h1 className="text-[#0A0A0A] font-normal text-[18px] line-clamp-2">
-                  {items.title}
-                </h1>
-                <p className="text-[#717182] text-[14px] cursor-pointer hover:underline py-2">
-                  {items.excerpt}
-                </p>
+            <Link
+              href={`/blog/${items?.id}`}
+              key={index}
+              className="cursor-pointer"
+            >
+              <div className="border rounded-xl">
+                <Image
+                  src={items.image}
+                  alt=""
+                  className="rounded-t-xl w-full"
+                />
+                <div className="p-8">
+                  <p className="bg-[#ECEEF2] text-[#0a0a0a] inline-block p-1 px-4 cursor-pointer rounded-full text-[12px] mb-4">
+                    {items.category}
+                  </p>
+                  <h1 className="text-[#0A0A0A] font-normal text-[18px] line-clamp-2 hover:underline cursor-pointer hover:text-[#f97316] duration-300">
+                    {items.title}
+                  </h1>
+                  <p className="text-[#717182] text-[14px] cursor-pointer hover:underline py-2">
+                    {items.excerpt}
+                  </p>
 
-                <div className="flex gap-4 items-center">
-                  <div className="flex flex-row gap-2 items-center text-[#717182] pt-4">
-                    <Calendar />
-                    <p className="text-[14px]">{items.date}</p>
-                  </div>
-                  <div className="flex flex-row gap-2 items-center text-[#717182] pt-4">
-                    <Clock8 />
-                    <p className="text-[14px]">{items.readTime}</p>
+                  <div className="flex gap-4 items-center">
+                    <div className="flex flex-row gap-2 items-center text-[#717182] pt-4">
+                      <Calendar />
+                      <p className="text-[14px]">{items.date}</p>
+                    </div>
+                    <div className="flex flex-row gap-2 items-center text-[#717182] pt-4">
+                      <Clock8 />
+                      <p className="text-[14px]">{items.readTime}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </section>
       </article>
