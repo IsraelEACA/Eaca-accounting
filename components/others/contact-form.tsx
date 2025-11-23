@@ -126,7 +126,7 @@ export default function ContactForm({
             </FieldGroup>
           </FieldGroup>
           <div>
-            <p className="mt-6 text-[#717182]">
+            <p className="mt-6 text-[#717182] text-center">
               Your data is secure and will not be shared with third parties.
             </p>
           </div>

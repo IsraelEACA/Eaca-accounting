@@ -427,7 +427,9 @@ export function PricingComponent() {
             whileInView="visible"
             variants={slideUp}
             viewport={{ once: true }}
-            className="bg-white shadow-xl rounded-xl py-6 border h-175 sm:h-185 lg:h-185"
+            className={`bg-white shadow-xl rounded-xl py-6 border ${
+              items?.pricingTitle === "Foundation Plan" ? "h-185" : "h-180"
+            } sm:h-185 lg:h-185`}
             key={index}
           >
             <div className="p-6 pb-0 border-b">
@@ -516,8 +518,12 @@ export function ContactUsComponent() {
               {/* text contents */}
               <div className="">
                 <h1 className="text-[#0e0e0e] text-[18px]">Phone/Whatsapp:</h1>
-                <p className="text-[#717182] text-[16px]">+1 (555) 123-4567</p>
-                <p className="text-[#717182] text-[16px]">Quick Response</p>
+                <p className="text-[#717182] text-[14px] sm:text-[16px]">
+                  +1 (555) 123-4567
+                </p>
+                <p className="text-[#717182] text-[14px] sm:text-[16px]">
+                  Quick Response
+                </p>
               </div>
             </div>
             {/* email contact details */}
@@ -557,8 +563,12 @@ export function ContactUsComponent() {
               {/* text contents */}
               <div className="">
                 <h1 className="text-[#0e0e0e] text-[18px]">Hours:</h1>
-                <p className="text-[#717182] text-[16px]">Mondays - Fridays</p>
-                <p className="text-[#717182] text-[16px]">9:00AM - 6:00PM</p>
+                <p className="text-[#717182] text-[14px] sm:text-[16px]">
+                  Mondays - Fridays
+                </p>
+                <p className="text-[#717182] text-[14px] sm:text-[16px]">
+                  9:00AM - 6:00PM
+                </p>
               </div>
             </div>
           </div>
