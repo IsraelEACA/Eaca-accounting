@@ -48,7 +48,7 @@ export function PriceComparisonComponents() {
                       className="pb-12 lg:pb-[51px] flex items-center gap-2"
                       key={index}
                     >
-                      <CircleCheck color="#f97316" size={16} />
+                      <CircleCheck color="#f97316" />
                       <span className="font-bold">{list}</span>
                     </p>
                   ))}
