@@ -427,9 +427,7 @@ export function PricingComponent() {
             whileInView="visible"
             variants={slideUp}
             viewport={{ once: true }}
-            className={`bg-white shadow-xl rounded-xl py-6 border ${
-              items?.pricingTitle === "Foundation Plan" ? "h-185" : "h-180"
-            } sm:h-185 lg:h-185`}
+            className={`bg-white shadow-xl rounded-xl py-6 border h-195`}
             key={index}
           >
             <div className="p-6 pb-0 border-b">
@@ -438,7 +436,7 @@ export function PricingComponent() {
               </h3>
               <div className="py-6">
                 <p>From</p>
-                <h1 className="text-[36px] sm:text-[36px] font-bold">
+                <h1 className="text-[48px] font-bold">
                   <span>£{items?.pricing}</span>
                   <span className="text-[#717182] text-[24px] font-semibold">
                     <i className="text-[18px] font-extrabold">/</i> mo
@@ -462,7 +460,9 @@ export function PricingComponent() {
               </div>
             </div>
             <div className="py-6 p-6">
-              <h1 className="uppercase">{items?.pricingData}</h1>
+              <h1 className="uppercase text-[14px] sm:text-[16px]">
+                {items?.pricingData}
+              </h1>
               {items?.pricingList.map((item, index) => (
                 <div className="flex gap-1 items-start py-3" key={index}>
                   <p className="bg-[#f97316] p-1 rounded-full text-white inline-block">
