@@ -35,7 +35,7 @@ export function PriceComparisonComponents() {
           <Image src={EacaImages.PriceLogo} alt="pricing_logo" />
           {PRICINGCOMPARISONDATA.slice(0, 1).map((items, index) => (
             <div
-              className="text-[#050038] mt-12 relative p-8 lg:p-4 pt-4 border-t-2 border-b-8 border-r-8 border-l-4 border-[#f97316]  rounded-xl"
+              className="text-[#050038] mt-12 relative pl-3 sm:p-8 lg:p-4 pt-4 border-t-2 border-b-8 border-r-8 border-l-4 border-[#f97316]  rounded-xl"
               key={index}
             >
               <h1 className="py-4 lg:pb-12 text-[18px] uppercase font-bold">
@@ -48,7 +48,7 @@ export function PriceComparisonComponents() {
                       className="pb-12 lg:pb-[51px] flex items-center gap-2"
                       key={index}
                     >
-                      <CircleCheck color="#f97316" />
+                      <CircleCheck color="#f97316" size={16} />
                       <span className="font-bold">{list}</span>
                     </p>
                   ))}
@@ -77,7 +77,7 @@ export function PriceComparisonComponents() {
           </h1>
           {PRICINGCOMPARISONDATA.slice(1, 2).map((items, index) => (
             <div
-              className="text-[#050038] lg:mt-12 xl:mt-12 relative p-8 lg:p-4 pt-4 border-t-2 border-b-8 border-r-8 border-l-4 border-[#E20000] rounded-xl"
+              className="text-[#050038] lg:mt-12 xl:mt-12 relative pl-3 sm:p-8 lg:p-4 pt-4 border-t-2 border-b-8 border-r-8 border-l-4 border-[#E20000] rounded-xl"
               key={index}
             >
               <h1 className="py-4 pb-12 text-[18px] uppercase font-bold">
