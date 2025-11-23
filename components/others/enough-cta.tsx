@@ -37,8 +37,9 @@ export default function EnoughCta() {
             viewport={{ once: true }}
             className="font-normal mx-6 sm:mx-0 text-[14px] md:text-[20px]"
           >
-            We are here to help you better understand, <br className="" />{" "}
-            manage and maximize your business potentials.
+            We are here to help you better understand,{" "}
+            <br className="hidden sm:block" /> manage and maximize your business
+            potentials.
           </motion.p>
           <div className="flex items-center justify-center gap-2 mt-6 w-full">
             <Link href="/contact">

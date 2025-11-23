@@ -223,14 +223,16 @@ export function HowItWorks() {
               items?.title === "Our Firm"
                 ? "text-white bg-[#f97316]"
                 : "text-black bg-[#F9F9FB]"
-            } p-5 rounded-xl border`}
+            } p-3 rounded-xl border`}
             key={index}
           >
             <h2 className={`font-semibold pb-2`}>{items?.title}</h2>
             <div className="">
               {items.description.map((desc, index) => (
                 <p
-                  className="py-4 pt-6 border-t border-t-[#d2d2d267]"
+                  className={`${
+                    items?.title === "Our Firm" ? "py-4" : "py-9"
+                  }  pt-6 border-t border-t-[#d2d2d267]`}
                   key={index}
                 >
                   {desc}
@@ -434,15 +436,18 @@ export function PricingComponent() {
               <h3 className="uppercase text-[18px] font-semibold">
                 {items?.pricingTitle}
               </h3>
+              <p className="text-[#717182] pt-4">{items?.pricingTag}</p>
               <div className="py-6">
                 <p>From</p>
                 <h1 className="text-[48px] font-bold">
                   <span>£{items?.pricing}</span>
                   <span className="text-[#717182] text-[24px] font-semibold">
-                    <i className="text-[18px] font-extrabold">/</i> mo
+                    <i className="font-extrabold relative bottom-1.5 text-[18px]">
+                      /
+                    </i>
+                    <span className="relative bottom-0.5"> mo</span>
                   </span>
                 </h1>
-                <p className="text-[#717182] pt-4">{items?.pricingTag}</p>
                 <p className="text-[#717182] pt-4">
                   {items?.pricingDescription}
                 </p>
