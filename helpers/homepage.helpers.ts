@@ -134,7 +134,8 @@ export const PRICINGDATA = [
   {
     pricingTitle: "Foundation Plan",
     pricing: "250",
-    pricingTag: "For new/small owner managed businesses.",
+    // pricingTag: "For new/small owner managed businesses.",
+    pricingTag: "For new & small businesses.",
     pricingDescription: "Stay compliant & on top of your finances.",
     pricingData: "Everything included",
     pricingList: [
