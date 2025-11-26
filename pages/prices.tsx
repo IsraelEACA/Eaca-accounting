@@ -76,7 +76,7 @@ export function PriceComparisonComponents() {
         </div>
         <div>
           {/* other chattered Accountants */}
-          <h1 className="text-[#050038] pb-4 text-center xl:text-left text-[32px] font-semibold">
+          <h1 className="text-[#050038] pb-4 sm:pb-0 sm:pt-3 relative top-4 text-center xl:text-left text-[32px] sm:text-[36px] font-semibold">
             Other Chartered <br className="block sm:hidden" /> Accountants
           </h1>
           {PRICINGCOMPARISONDATA.slice(1, 2).map((items, index) => (
