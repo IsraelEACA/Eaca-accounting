@@ -175,7 +175,7 @@ export const PRICINGDATA = [
 
 export const PRICINGCOMPARISONDATA = [
   {
-    title: "How we work",
+    title: "How we work:",
     description: [
       "Open, responsive, and collaborative approach.",
       "Tailored solutions aligned with your business goals",
@@ -187,7 +187,7 @@ export const PRICINGCOMPARISONDATA = [
     ],
   },
   {
-    title: "How others work",
+    title: "How others work:",
     description: [
       "Limited contact, mostly one-sided",
       "One-size-fits-all approach",
