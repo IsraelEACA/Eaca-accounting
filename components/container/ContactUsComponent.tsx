@@ -2,21 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { Check, ChevronRight, Mail, MapPin, Phone } from "lucide-react"; // prettier-ignore
+import { Mail, MapPin, Phone } from "lucide-react"; // prettier-ignore
 
 import { EacaImages } from "@/constant/image";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/others/contact-form";
-
-import { fadeUp, slideUp } from "@/components/animations/variants";
-import { AboutUsComponents } from "@/components/container/AboutUsComponents";
-import { HomepageBanner } from "@/components/container/HomePageBanner";
-import { HowItWorks } from "@/components/container/HowItWorks";
-import { ACCOUNTINGDATA } from "@/helpers/homepage.helpers";
-import { PRICINGDATA, WHOWEWORKDATA } from "@/helpers/homepage.helpers";
-import EnoughCta from "@/components/others/enough-cta";
 
 export function ContactUsComponent() {
   return (

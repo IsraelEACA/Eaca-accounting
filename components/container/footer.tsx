@@ -17,7 +17,7 @@ import Link from "next/link";
 export default function footer() {
   return (
     <div className="border-t border-t-zinc-200 pt-8">
-      <footer className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1200px] mx-auto">
+      <footer className="max-w-[90%] lg:max-w-[90%] xl:max-w-300 mx-auto">
         {/* main footer */}
         <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-10 sm:gap-0 py-8">
           <div>

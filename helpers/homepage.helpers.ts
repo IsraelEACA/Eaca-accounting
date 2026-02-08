@@ -130,6 +130,29 @@ export const WHOWEWORKDATA = [
   },
 ];
 
+export const OURVALUES = [
+  {
+    title: "Integrity",
+    description:
+      "We uphold the highest ethical standards so every client relationship is built on honesty, confidentiality, and unwavering professionalism",
+  },
+  {
+    title: "Excellence",
+    description:
+      "We deliver top‑tier, tailored expertise and rigorous quality to ensure small businesses receive the same standard of insight as large firms",
+  },
+  {
+    title: "Clarity",
+    description:
+      "We transform complex financial information into clear, actionable guidance that enables confident, well‑informed choices",
+  },
+  {
+    title: "Partnership",
+    description:
+      "We work alongside clients as committed advisors, shaping every recommendation around their goals, challenges, and long‑term success",
+  },
+];
+
 export const PRICINGDATA = [
   {
     pricingTitle: "Foundation Plan",

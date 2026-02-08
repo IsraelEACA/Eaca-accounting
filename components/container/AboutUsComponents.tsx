@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 import { EacaImages } from "@/constant/image";
 import { fadeUp } from "@/components/animations/variants";
+import { OURVALUES } from "@/helpers/homepage.helpers";
 
 export function AboutUsComponents() {
   return (
@@ -22,7 +23,7 @@ export function AboutUsComponents() {
           data-aos="fade-up"
           data-aos-anchor-placement="bottom-center"
         >
-          <div>
+          <div className="hidden">
             <Image
               src={EacaImages.AboutImage}
               alt="about_image"
@@ -37,7 +38,7 @@ export function AboutUsComponents() {
               <h1 className="text-[24px] font-normal">
                 ‘Seun Adeoye (FCCA, CISA)
               </h1>
-              <p>Founder</p>
+              <p>About the Founder</p>
             </div>
             <p className="text-[#717182] text-[16px] leading-7">
               A seasoned Accountant and Auditor with over 10 years experience at
@@ -49,6 +50,22 @@ export function AboutUsComponents() {
               Association of Chartered Certified Accountants (FCCA) & a
               Certified Information System Auditor (CISA).
             </p>
+          </div>
+          {/* our values */}
+          <div className="border-t">
+            <h1 className="text-[24px] font-medium py-4">Our Values</h1>
+            <div className="grid grid-cols-1 items-center">
+              {OURVALUES.map((items, index) => (
+                <motion.div variants={fadeUp} className="" key={index}>
+                  <h1 className="text-[16px] text-[#f97316] font-medium py-4">
+                    {items?.title}
+                  </h1>
+                  <p className="text-[#717182] text-[14px] leading-6 text-balance">
+                    {items?.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
 
