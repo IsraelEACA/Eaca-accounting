@@ -77,7 +77,7 @@ export function PriceComparisonComponents() {
         <div>
           {/* other chattered Accountants */}
           <h1 className="text-[#050038] pb-4 sm:pb-0 sm:pt-3 relative top-4 text-center xl:text-left text-[32px] sm:text-[36px] font-semibold">
-            Other Chartered <br className="block sm:hidden" /> Accountants
+            Other Certified <br className="block sm:hidden" /> Accountants
           </h1>
           {PRICINGCOMPARISONDATA.slice(1, 2).map((items, index) => (
             <div
@@ -91,7 +91,7 @@ export function PriceComparisonComponents() {
                 <div className="relative flex-1 lg:flex-none">
                   {items?.description.map((list, index) => (
                     <p
-                      className="pb-12 lg:pb-[51px] flex items-center gap-2"
+                      className="pb-12 lg:pb-12.75 flex items-center gap-2"
                       key={index}
                     >
                       <CircleX color="#E20000" />

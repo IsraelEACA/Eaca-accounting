@@ -55,7 +55,7 @@ export function HomepageBanner() {
             variants={fadeUp}
             className="text-[#717182] leading-7 sm:text-[16px]"
           >
-            Elevare Advisory & Chartered Accountants provides accounting for
+            Elevare Advisory & Certified Accountants provides accounting for
             small businesses, sole proprietors, financial services firms,
             contractors <br /> and freelancers. We give you clarity in your
             numbers and the insight to excel with them

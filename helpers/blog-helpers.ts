@@ -3,6 +3,7 @@ import { EacaImages } from "@/constant/image";
 export const BLOGHELPERSDATA = [
   {
     id: 1,
+    slug: "how-to-choose-the-right-business-entity",
     category: "Business Formation",
     title: "How to Choose the Right Business Entity: LLC vs S-Corp vs C-Corp",
     excerpt:
@@ -15,6 +16,7 @@ export const BLOGHELPERSDATA = [
   },
   {
     id: 2,
+    slug: "understanding-financial-statements",
     category: "Financial Management",
     title: "Understanding Financial Statements: A Beginner’s Guide",
     excerpt:
@@ -27,6 +29,7 @@ export const BLOGHELPERSDATA = [
   },
   {
     id: 3,
+    slug: "common-book-keeping-mistakes-small-busiiness-owners-make",
     category: "Bookkeeping",
     title: "10 Common Bookkeeping Mistakes Small Business Owners Make",
     excerpt:
@@ -39,6 +42,7 @@ export const BLOGHELPERSDATA = [
   },
   {
     id: 4,
+    slug: "year-end-tax-checklist",
     category: "Tax Planning",
     title: "Year-End Tax Checklist: What Every Business Owner Needs to Know",
     excerpt: "Prepare your business for tax season with this guide.",
@@ -50,6 +54,7 @@ export const BLOGHELPERSDATA = [
   },
   {
     id: 5,
+    slug: "benefits-of-quarterly-financial-reviews-for-your-business",
     category: "Financial Management",
     title: "The Benefits of Quarterly Financial Reviews for Your Business",
     excerpt:

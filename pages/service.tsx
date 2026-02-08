@@ -5,7 +5,7 @@ import EnoughCta from "@/components/others/enough-cta";
 
 export default function ServicesPages() {
   return (
-    <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1200px] mx-auto">
+    <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-300 mx-auto">
       <ServicesComponents />
       <EnoughCta />
     </div>

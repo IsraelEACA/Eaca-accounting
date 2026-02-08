@@ -7,6 +7,7 @@ import {
   Instagram,
   Linkedin,
   Mail,
+  MapIcon,
   Phone,
   Twitter,
 } from "lucide-react";
@@ -31,11 +32,15 @@ export default function footer() {
             <div className="location py-4 flex flex-col items-center sm:items-start">
               <div className="flex gap-4 items-center">
                 <Phone size={18} color="#f97316" />
-                <p>+1 (555) 123-4567</p>
+                <p>077653068915</p>
               </div>
               <div className="flex gap-4 items-center py-3">
                 <Mail size={18} color="#f97316" />
-                <p>contact@eaca.co.uk</p>
+                <p>contact@elevareaca.co.uk</p>
+              </div>
+              <div className="flex gap-4 items-center py-3">
+                <MapIcon size={18} color="#f97316" />
+                <p>Bartle House, Oxford Court, Manchester, M2 3WQ</p>
               </div>
             </div>
             <div className="social_icons flex gap-12 items-center pt-4">
@@ -56,7 +61,7 @@ export default function footer() {
         {/* copy right */}
         <div className="text-black flex flex-col-reverse sm:flex-row justify-between items-center gap-10 sm:gap-0 py-6">
           <p className="text-center sm:text-left">
-            © All rights reserved Elevare Advisory & Chartered Accountants
+            © All rights reserved Elevare Advisory & Certified Accountants
           </p>
           <div className="flex items-center gap-12 sm:gap-32">
             <p className="hover:text-orange-400 duration-300 underline">

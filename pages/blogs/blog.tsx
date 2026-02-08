@@ -1,14 +1,15 @@
 "use client";
 
-import { BLOGHELPERSDATA } from "@/helpers/blog-helpers";
-import { Calendar, Clock8 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Calendar, Clock8 } from "lucide-react";
 import { useState } from "react";
+
+import { BLOGHELPERSDATA } from "@/helpers/blog-helpers";
 
 export default function BlogComponents() {
   return (
-    <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1200px] mx-auto">
+    <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-300 mx-auto">
       <BlogHeader />
     </div>
   );
@@ -82,7 +83,7 @@ export function BlogPosts() {
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 items-start mt-16">
           {filteredBlogs.map((items, index) => (
             <Link
-              href={`/blog/${items?.id}`}
+              href={`/blog/${items?.slug}`}
               key={index}
               className="cursor-pointer"
             >
