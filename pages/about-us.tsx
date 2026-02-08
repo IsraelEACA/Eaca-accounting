@@ -1,11 +1,12 @@
 "use Client";
 
-import { AboutUsComponents, HowItWorks } from "./homepage";
+import { AboutUsComponents } from "@/components/container/AboutUsComponents";
+import { HowItWorks } from "@/components/container/HowItWorks";
 import EnoughCta from "@/components/others/enough-cta";
 
 export default function AboutUs() {
   return (
-    <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1200px] mx-auto mb-24">
+    <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-300 mx-auto mb-24">
       <AboutUsComponents />
       <HowItWorks />
       <EnoughCta />

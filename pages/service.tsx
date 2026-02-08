@@ -1,6 +1,6 @@
 "use Client";
 
-import { ServicesComponents } from "./homepage";
+import { ServicesComponents } from "@/components/container/ServicesComponents";
 import EnoughCta from "@/components/others/enough-cta";
 
 export default function ServicesPages() {

@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import { EacaImages } from "@/constant/image";
-import { PricingComponent } from "./homepage";
+import { PricingComponent } from "@/components/container/PricingComponent";
 import { PRICINGCOMPARISONDATA } from "@/helpers/homepage.helpers";
 
 import { Inter } from "next/font/google";
@@ -16,7 +16,7 @@ const inter = Inter({
 
 export default function PricingComponentPage() {
   return (
-    <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-[1200px] mx-auto mb-48">
+    <div className="max-w-[90%] lg:max-w-[90%] xl:max-w-300 mx-auto mb-48">
       <div className="relative top-20">
         <PricingComponent />
         <PriceComparisonComponents />
@@ -45,7 +45,7 @@ export function PriceComparisonComponents() {
                 <div className="relative">
                   {items?.description.map((list, index) => (
                     <p
-                      className="pb-12 lg:pb-[51px] flex items-center gap-2"
+                      className="pb-12 lg:pb-12.75 flex items-center gap-2"
                       key={index}
                     >
                       <CircleCheck color="#f97316" />
