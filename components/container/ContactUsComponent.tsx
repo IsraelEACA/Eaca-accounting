@@ -7,6 +7,7 @@ import { Mail, MapPin, Phone } from "lucide-react"; // prettier-ignore
 import { EacaImages } from "@/constant/image";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/others/contact-form";
+import Link from "next/link";
 
 export function ContactUsComponent() {
   return (
@@ -45,9 +46,9 @@ export function ContactUsComponent() {
               </div>
               {/* text contents */}
               <div className="">
-                <h1 className="text-[#0e0e0e] text-[18px]">Phone/Whatsapp:</h1>
-                <p className="text-[#717182] text-[14px] sm:text-[16px]">
-                  +1 (555) 123-4567
+                <h1 className="text-[#0e0e0e] text-[18px]">Phone:</h1>
+                <p className="cursor-pointer text-[#717182] text-[14px] sm:text-[16px]">
+                  <a href="tel:077653068915">077653068915</a>
                 </p>
                 <p className="text-[#717182] text-[14px] sm:text-[16px]">
                   Quick Response
@@ -63,8 +64,10 @@ export function ContactUsComponent() {
               {/* text contents */}
               <div className="">
                 <h1 className="text-[#0e0e0e] text-[18px]">Email:</h1>
-                <p className="text-[#717182] text-[14px] sm:text-[16px]">
-                  contact@eaca.co.uk
+                <p className="cursor-pointer text-[#717182] text-[14px] sm:text-[16px]">
+                  <a href="mailto:contact@elevareaca.co.uk">
+                    contact@elevareaca.co.uk
+                  </a>
                 </p>
                 <p className="text-[#717182] text-[14px]  sm:text-[16px]">
                   Response within 24h
@@ -96,9 +99,11 @@ export function ContactUsComponent() {
                 Book a brief introductory session to discuss your business needs
                 and how we can best support you
               </p>
-              <Button className="bg-white hover:bg-[#0e0e0e] hover:text-white  text-[#0e0e0e] w-full capitalize cursor-pointer py-6 rounded-xl duration-300">
-                Book Now
-              </Button>
+              <Link href={"/contact"} className="w-full">
+                <Button className="bg-white hover:bg-[#0e0e0e] hover:text-white  text-[#0e0e0e] w-full capitalize cursor-pointer py-6 rounded-xl duration-300">
+                  Book Now
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

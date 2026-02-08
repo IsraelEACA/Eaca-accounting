@@ -32,11 +32,17 @@ export default function footer() {
             <div className="location py-4 flex flex-col items-center sm:items-start">
               <div className="flex gap-4 items-center">
                 <Phone size={18} color="#f97316" />
-                <p>077653068915</p>
+                <p>
+                  <a href="tel:077653068915">077653068915</a>
+                </p>
               </div>
               <div className="flex gap-4 items-center py-3">
                 <Mail size={18} color="#f97316" />
-                <p>contact@elevareaca.co.uk</p>
+                <p>
+                  <a href="mailto:contact@elevareaca.co.uk">
+                    contact@elevareaca.co.uk
+                  </a>
+                </p>
               </div>
               <div className="flex gap-4 items-center py-3">
                 <MapIcon size={18} color="#f97316" />
