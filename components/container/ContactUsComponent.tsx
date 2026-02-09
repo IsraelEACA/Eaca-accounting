@@ -7,7 +7,7 @@ import { Mail, MapPin, Phone } from "lucide-react"; // prettier-ignore
 import { EacaImages } from "@/constant/image";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/others/contact-form";
-import Link from "next/link";
+// import Link from "next/link";
 
 export function ContactUsComponent() {
   return (
@@ -99,11 +99,11 @@ export function ContactUsComponent() {
                 Book a brief introductory session to discuss your business needs
                 and how we can best support you
               </p>
-              <Link href={"/contact"} className="w-full">
+              <a href="tel:077653068915" className="w-full">
                 <Button className="bg-white hover:bg-[#0e0e0e] hover:text-white  text-[#0e0e0e] w-full capitalize cursor-pointer py-6 rounded-xl duration-300">
                   Book Now
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

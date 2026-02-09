@@ -155,6 +155,21 @@ export const OURVALUES = [
 
 export const PRICINGDATA = [
   {
+    pricingTitle: "Custom Plan",
+    pricing: "150",
+    pricingTag: "Best suited for individual.",
+    pricingDescription: "Stay in control of your financial decisions.",
+    pricingData: "Everything included",
+    pricingList: [
+      // "Weekly bookkeeping",
+      // "VAT returns",
+      // "Annual accounts preparation",
+      // "Tax planning and review",
+      // "Telephone and email support",
+      // "General business advisory & insights",
+    ],
+  },
+  {
     pricingTitle: "Foundation Plan",
     pricing: "250",
     pricingTag: "For new & small businesses.",
@@ -183,7 +198,9 @@ export const PRICINGDATA = [
     pricing: "850",
     pricingTag: "For larger companies.",
     pricingDescription:
-      " Get an outsourced Finance  Partner & controller for your business.",
+      " Get an outsourced Finance  Partner for your business.",
+    // pricingDescription:
+    //   " Get an outsourced Finance  Partner & controller for your business.",
     pricingData: "Everything in Momentum plan plus;",
     pricingList: [
       "Payroll services",
