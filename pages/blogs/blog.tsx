@@ -49,7 +49,7 @@ export function BlogPosts() {
   return (
     <main>
       <div className="flex justify-center items-center mt-12">
-        <div className="flex flex-wrap items-center gap-8 text-[#717182]">
+        <div className="flex flex-wrap items-center gap-2 md:gap-4 lg:gap-6 xl:gap-8 text-[#717182]">
           <p
             onClick={() => setActiveCategory("All")}
             className={`text-[14px] border p-1 px-4 cursor-pointer rounded-full duration-200
