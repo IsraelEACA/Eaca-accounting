@@ -14,7 +14,7 @@ export const BLOGHELPERSDATA = [
     companyName: "Elevare Advisory",
     content: (
       <div className="space-y-6 text-gray-700 leading-relaxed">
-        <p className="text-lg">
+        <p className="">
           Choosing the right business entity is one of the most critical
           decisions you will make when launching or scaling a company. Your
           choice directly impacts how much tax you pay, your personal liability,
@@ -288,7 +288,7 @@ export const BLOGHELPERSDATA = [
     companyName: "Elevare Advisory",
     content: (
       <div className="space-y-6 text-gray-700 leading-relaxed">
-        <p className="text-lg">
+        <p className="">
           Financial statements are the backbone of every successful business.
           They tell the story of your company&apos;s performance, stability, and
           potential — and whether you run a solo consultancy or a growing
@@ -583,7 +583,7 @@ export const BLOGHELPERSDATA = [
     companyName: "Elevare Advisory",
     content: (
       <div className="space-y-6 text-gray-700 leading-relaxed">
-        <p className="text-lg">
+        <p className="">
           Bookkeeping is the foundation of a financially healthy business. When
           done well, it gives you accurate data to make decisions, meet tax
           obligations, and grow with confidence. When done poorly — or neglected
@@ -794,7 +794,7 @@ export const BLOGHELPERSDATA = [
     companyName: "Elevare Advisory",
     content: (
       <div className="space-y-6 text-gray-700 leading-relaxed">
-        <p className="text-lg">
+        <p className="">
           Tax planning is one of the most critical aspects of running a
           successful small business. With the right strategies in place, you can
           legally minimize your tax liability and keep more money in your
@@ -1048,7 +1048,7 @@ export const BLOGHELPERSDATA = [
     companyName: "Elevare Advisory",
     content: (
       <div className="space-y-6 text-gray-700 leading-relaxed">
-        <p className="text-lg">
+        <p className="">
           Most business owners review their finances once a year — usually
           during tax season, under pressure, and with little time to act on what
           they find. This reactive approach leaves significant value on the
