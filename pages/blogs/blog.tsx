@@ -42,6 +42,10 @@ export function BlogPosts() {
       ? BLOGHELPERSDATA
       : BLOGHELPERSDATA.filter((item) => item.category === activeCategory);
 
+  const uniqueCategories = [
+    ...new Set(BLOGHELPERSDATA.map((item) => item.category)),
+  ];
+
   return (
     <main>
       <div className="flex justify-center items-center mt-12">
@@ -60,19 +64,19 @@ export function BlogPosts() {
           </p>
 
           {/* LIST CATEGORY BUTTONS */}
-          {BLOGHELPERSDATA.map((items, index) => (
+          {uniqueCategories.map((category, index) => (
             <p
               key={index}
-              onClick={() => setActiveCategory(items.category)}
+              onClick={() => setActiveCategory(category)}
               className={`text-[14px] border p-1 px-4 cursor-pointer rounded-full duration-200
-                ${
-                  activeCategory === items.category
-                    ? "bg-[#F97316] text-white"
-                    : "hover:bg-[#F97316] hover:text-white"
-                }
-              `}
+      ${
+        activeCategory === category
+          ? "bg-[#F97316] text-white"
+          : "hover:bg-[#F97316] hover:text-white"
+      }
+    `}
             >
-              {items.category}
+              {category}
             </p>
           ))}
         </div>

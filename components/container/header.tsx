@@ -86,14 +86,17 @@ export default function Header() {
             >
               <div>
                 {/* Close Button inside */}
-                <div className="flex justify-end mb-6">
+                <div className="flex justify-between mb-6">
+                  <div>
+                    <Image src={EacaImages?.LogoImage} alt="" />
+                  </div>
                   <button onClick={closeMenu}>
-                    <X size={28} className="text-[#171717]" />
+                    <X size={20} className="text-[#171717]" />
                   </button>
                 </div>
 
                 {/* Mobile Menu Links */}
-                <nav className="flex flex-col gap-6 text-[#717182] text-lg">
+                <nav className="flex flex-col gap-6 text-[#717182] text-[14px]  sm:text-[16px]">
                   {HEADERLINKSHELPERDATA.map((menu, index) => (
                     <Link href={menu.link} key={index} onClick={closeMenu}>
                       <p className="cursor-pointer capitalize hover:text-[#F97316] duration-300">
@@ -107,7 +110,7 @@ export default function Header() {
               {/* CTA Button */}
               <div className="mt-8">
                 <Link href={"/contact"} onClick={closeMenu}>
-                  <Button className="w-full bg-[#F97316] text-white hover:bg-orange-600 hover:text-[#171717] duration-300 cursor-pointer">
+                  <Button className="text-[14px] sm:text-[16px] w-full bg-[#F97316] text-white hover:bg-orange-600 hover:text-[#171717] duration-300 cursor-pointer">
                     Contact us
                   </Button>
                 </Link>

@@ -2,6 +2,10 @@ import { EacaImages } from "@/constant/image";
 
 export const HEADERLINKSHELPERDATA = [
   {
+    linkName: "Home",
+    link: "/",
+  },
+  {
     linkName: "About Us",
     link: "/about",
   },
