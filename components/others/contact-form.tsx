@@ -135,7 +135,7 @@ export default function ContactForm({
                     <SelectItem value="digital-transformation">
                       Digital transformation
                     </SelectItem>
-                    <SelectItem value="digital-transformation">
+                    <SelectItem value="other-bespoke-services">
                       Other bespoke services
                     </SelectItem>
                   </SelectGroup>

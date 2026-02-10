@@ -33,7 +33,7 @@ export function ContactUsComponent() {
             />
             <div className="absolute bottom-3 left-10 text-white">
               <h1 className="text-[32px] font-normal">Ready to serve</h1>
-              <p>Your partner in financial management.</p>
+              <p>A partner for every step of your business journey.</p>
             </div>
           </div>
           {/* company contact information */}
@@ -48,7 +48,7 @@ export function ContactUsComponent() {
               <div className="">
                 <h1 className="text-[#0e0e0e] text-[18px]">Phone:</h1>
                 <p className="cursor-pointer text-[#717182] text-[14px] sm:text-[16px]">
-                  <a href="tel:077653068915">077653068915</a>
+                  <a href="tel:07765306891">07765306891</a>
                 </p>
                 <p className="text-[#717182] text-[14px] sm:text-[16px]">
                   Quick Response
@@ -99,7 +99,7 @@ export function ContactUsComponent() {
                 Book a brief introductory session to discuss your business needs
                 and how we can best support you
               </p>
-              <a href="tel:077653068915" className="w-full">
+              <a href="tel:07765306891" className="w-full">
                 <Button className="bg-white hover:bg-[#0e0e0e] hover:text-white  text-[#0e0e0e] w-full capitalize cursor-pointer py-6 rounded-xl duration-300">
                   Book Now
                 </Button>

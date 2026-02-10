@@ -27,7 +27,7 @@ export default function footer() {
               <div className="flex gap-4 items-center">
                 <Phone size={18} color="#f97316" />
                 <p className="text-[#717182] text-[14px] sm:text-[16px]">
-                  <a href="tel:077653068915">077653068915</a>
+                  <a href="tel:07765306891">07765306891</a>
                 </p>
               </div>
               <div className="flex gap-4 items-center py-3">
