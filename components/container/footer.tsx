@@ -87,8 +87,9 @@ export default function footer() {
           </div>
         </div>
         {/* copy right */}
-        <div className="text-[#717182] text-[14px] flex flex-col-reverse sm:flex-row justify-between items-start gap-10 sm:gap-0 py-6">
-          <p className="text-left">
+        {/* <div className="text-[#717182] text-[14px] flex flex-col-reverse sm:flex-row justify-between items-start gap-10 sm:gap-0 py-6"> */}
+        <div className="text-[#717182] text-[14px] py-6">
+          <p className="text-center">
             © All rights reserved Elevare Advisory & Certified Accountants
           </p>
           <div className="hidden items-center gap-12 sm:gap-32">
