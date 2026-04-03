@@ -2,8 +2,14 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
-import { MapIcon, Phone, Twitter } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MessageCircle,
+} from "lucide-react";
+import { MapIcon, Phone } from "lucide-react";
 
 import { EacaImages } from "@/constant/image";
 import { FOOTERLINKSHELPERDATA } from "@/helpers/footer-helpers";
@@ -46,10 +52,30 @@ export default function footer() {
               </div>
             </div>
             <div className="social_icons flex gap-8 sm:gap-12 items-start pt-4 text-[#f97316]">
-              <Facebook size={18} />
-              <Twitter size={18} />
-              <Instagram size={18} />
-              <Linkedin size={18} />
+              <a
+                href="https://www.facebook.com/share/1KdzJ7qD7L/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook size={18} />
+              </a>
+              <a
+                href="https://wa.me/message/BY5Q7SJBS3FJL1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle size={18} />
+              </a>
+              <a
+                href="https://www.instagram.com/elevareaca?igsh=NXJxZHo1b21xY3Bk&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram size={18} />
+              </a>
+              <a href="" className="hidden">
+                <Linkedin size={18} />
+              </a>
             </div>
           </div>
           <div className="leading-10 text-[#717182] text-left text-[14px] sm:text-[16px] pt-12 sm:pt-0 sm:text-right w-full">
@@ -65,7 +91,7 @@ export default function footer() {
           <p className="text-left">
             © All rights reserved Elevare Advisory & Certified Accountants
           </p>
-          <div className="flex items-center gap-12 sm:gap-32">
+          <div className="hidden items-center gap-12 sm:gap-32">
             <Link href="/privacy">
               <p className="hover:text-orange-400 duration-300 underline">
                 Privacy Policy
