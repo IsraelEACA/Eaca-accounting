@@ -1,15 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { BLOGHELPERSDATA } from "@/helpers/blog-helpers";
-import {
-  ArrowLeft,
-  Calendar,
-  ChevronRight,
-  Clock10,
-  Share2,
-  User,
-} from "lucide-react";
+import { ArrowLeft, Calendar, Clock10, Share2, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -56,24 +48,6 @@ export default function SingleBlogPage({ slug }: { slug: string }) {
         <Image src={post?.image} alt="" className="w-full" />
       </div>
       <div className="text-[14px] sm:text-[16px]">{post?.content}</div>
-      <div className="my-24">
-        <div className="bg-[#ECECF04D] p-6 sm:p-8 rounded-xl">
-          <h1 className="text-[#0A0A0A] text-[18px] font-medium">
-            Need Help with Tax Planning?
-          </h1>
-          <p className="py-4 text-[14px] sm:text-[16px] text-[#717182]">
-            Schedule a free consultation to discuss your business tax strategy
-            and discover opportunities to reduce your tax burden legally and
-            effectively.
-          </p>
-          <Link href={"/contact"}>
-            <Button className="bg-[#F97316] text-white cursor-pointer">
-              <span>Schedule Consultation</span>
-              <ChevronRight />
-            </Button>
-          </Link>
-        </div>
-      </div>
     </div>
   );
 }

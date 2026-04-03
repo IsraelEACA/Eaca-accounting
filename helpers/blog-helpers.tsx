@@ -1,4 +1,7 @@
+import { Button } from "@/components/ui/button";
 import { EacaImages } from "@/constant/image";
+import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export const BLOGHELPERSDATA = [
   {
@@ -822,6 +825,24 @@ export const BLOGHELPERSDATA = [
           EACA, our team of experienced accountants is ready to help you
           implement a yearend tax strategy tailored to your unique situation.
         </p>
+        <div className="my-24">
+          <div className="bg-[#ECECF04D] p-6 sm:p-8 rounded-xl">
+            <h1 className="text-[#0A0A0A] text-[18px] font-medium">
+              Need Help with Tax Planning?
+            </h1>
+            <p className="py-4 text-[14px] sm:text-[16px] text-[#717182]">
+              Schedule a free consultation to discuss your business tax strategy
+              and discover opportunities to reduce your tax burden legally and
+              effectively.
+            </p>
+            <Link href={"/contact"}>
+              <Button className="bg-[#F97316] text-white cursor-pointer">
+                <span>Schedule Consultation</span>
+                <ChevronRight />
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
     ),
   },
