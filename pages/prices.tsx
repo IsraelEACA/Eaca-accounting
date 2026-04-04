@@ -12,6 +12,8 @@ import { CircleCheck, CircleX } from "lucide-react";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
+  preload: false,
 });
 
 export default function PricingComponentPage() {
