@@ -110,7 +110,7 @@ export function AboutUsComponents() {
           <motion.div variants={fadeUp} className="border rounded-xl p-6">
             <div className="mb-4">
               <p>About the Founder</p>
-              <h1 className="text-[24px] font-normal">
+              <h1 className="text-[16px] font-thin">
                 ‘Seun Adeoye (FCCA, CISA)
               </h1>
             </div>
@@ -121,7 +121,7 @@ export function AboutUsComponents() {
               industries, with a particular focus on financial services - from
               large publicly listed corporations to mid-sized enterprises and
               privately held businesses. <br /> <br /> A Fellow of the
-              Association of Certified Certified Accountants (FCCA) & a
+              Association of Certified Chartered Accountants (FCCA) & a
               Certified Information System Auditor (CISA).
             </p>
           </motion.div>
