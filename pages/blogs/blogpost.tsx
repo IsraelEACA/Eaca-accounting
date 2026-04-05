@@ -39,7 +39,7 @@ export default function SingleBlogPage({ slug }: { slug: string }) {
             <p>{post?.readTime}</p>
           </div>
         </div>
-        <div className="flex sm:items-center gap-2 text-[#717182]">
+        <div className="hidden sm:items-center gap-2 text-[#717182]">
           <Share2 size={16} />
           <p>share</p>
         </div>

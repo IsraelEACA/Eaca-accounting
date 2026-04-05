@@ -12,10 +12,10 @@ export const BLOGHELPERSDATA = [
       "How to Choose the Right Business Structure in the UK: Sole Trader vs Limited Company vs LLP",
     excerpt:
       "Choosing the right business structure is one of the most important decisions you'll make when starting or scaling a company in the UK.",
-    date: "October 15, 2025",
+    date: "April 6 2026",
     readTime: "5 min read",
     image: EacaImages.BookeepingBlog,
-    companyName: "Elevare Advisory",
+    companyName: "Elevare Advisory & Certified Accountants",
     content: (
       <div className="space-y-6 text-gray-700 leading-relaxed">
         <p>
@@ -226,6 +226,24 @@ export const BLOGHELPERSDATA = [
           future ambitions. Reach out today to schedule a complimentary
           consultation.
         </p>
+        <div className="my-24">
+          <div className="bg-[#ECECF04D] p-6 sm:p-8 rounded-xl">
+            <h1 className="text-[#0A0A0A] text-[18px] font-medium">
+              Need a clearer picture of your business performance ?
+            </h1>
+            <p className="py-4 text-[14px] sm:text-[16px] text-[#717182]">
+              Get in touch to explore how our process can benefit your
+              organisation and unlock the untapped potential within your
+              business.
+            </p>
+            <Link href={"/contact"}>
+              <Button className="bg-[#F97316] text-white cursor-pointer">
+                <span>Schedule Consultation</span>
+                <ChevronRight />
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
     ),
   },
@@ -236,10 +254,10 @@ export const BLOGHELPERSDATA = [
     title: "The Benefits of Quarterly Financial Reviews for Your Business",
     excerpt:
       "Most business owners review their finances once a year. Here's why quarterly reviews are a game-changer.",
-    date: "October 15, 2025",
+    date: "April 6 2026",
     readTime: "5 min read",
     image: EacaImages.FinancialManagement,
-    companyName: "Elevare Advisory",
+    companyName: "Elevare Advisory & Certified Accountants",
     content: (
       <div className="space-y-6 text-gray-700 leading-relaxed">
         <p>
@@ -476,20 +494,38 @@ export const BLOGHELPERSDATA = [
           Contact us today to learn how we can help you make quarterly reviews a
           cornerstone of your business strategy.
         </p>
+        <div className="my-24">
+          <div className="bg-[#ECECF04D] p-6 sm:p-8 rounded-xl">
+            <h1 className="text-[#0A0A0A] text-[18px] font-medium">
+              Need help with your company formation?
+            </h1>
+            <p className="py-4 text-[14px] sm:text-[16px] text-[#717182]">
+              Schedule a free consultation to discuss your business objectives
+              and discover the best structure to maximise your business
+              potential
+            </p>
+            <Link href={"/contact"}>
+              <Button className="bg-[#F97316] text-white cursor-pointer">
+                <span>Schedule Consultation</span>
+                <ChevronRight />
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
     ),
   },
   {
-    id: 4,
+    id: 3,
     slug: "year-end-tax-checklist",
     category: "Tax Planning",
     title: "Year-End Tax Checklist: What Every Business Owner Needs to Know",
     excerpt:
       "Prepare your business for tax season with this comprehensive guide.",
-    date: "October 18, 2025",
+    date: "April 6 2026",
     readTime: "8 min read",
     image: EacaImages.TaxPlanningBlog,
-    companyName: "Elevare Advisory",
+    companyName: "Elevare Advisory & Certified Accountants",
     content: (
       <div className="space-y-6 text-gray-700 leading-relaxed">
         <p>
@@ -847,16 +883,16 @@ export const BLOGHELPERSDATA = [
     ),
   },
   {
-    id: 6,
+    id: 4,
     slug: "10-common-bookkeeping-mistakes-uk-small-business-owners-make",
     category: "Bookkeeping",
-    title: "🇬🇧 10 Common Bookkeeping Mistakes UK Small Business Owners Make",
+    title: "10 Common Bookkeeping Mistakes UK Small Business Owners Make",
     excerpt:
       "Most bookkeeping mistakes are completely avoidable. Here are the ten most common errors UK small business owners make and how to avoid them.",
-    date: "October 15, 2025",
+    date: "April 6 2026",
     readTime: "5 min read",
     image: EacaImages.BookeepingBlog,
-    companyName: "Elevare Advisory",
+    companyName: "Elevare Advisory & Certified Accountants",
     content: (
       <div className="space-y-6 text-gray-700 leading-relaxed">
         <p>
