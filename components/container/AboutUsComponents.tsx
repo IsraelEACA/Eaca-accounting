@@ -121,8 +121,8 @@ export function AboutUsComponents() {
               industries, with a particular focus on financial services - from
               large publicly listed corporations to mid-sized enterprises and
               privately held businesses. <br /> <br /> A Fellow of the
-              Association of Certified Chartered Accountants (FCCA) & a
-              Certified Information System Auditor (CISA).
+              Association of Chartered Certified Accountants(FCCA) & a Certified
+              Information System Auditor (CISA).
             </p>
           </motion.div>
         </div>
