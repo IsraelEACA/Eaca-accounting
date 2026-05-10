@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Calendar, Clock8 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { BLOGHELPERSDATA } from "@/helpers/blog-helpers";
 
@@ -16,6 +16,14 @@ export default function BlogComponents() {
 }
 
 export function BlogHeader() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://app.trysoro.com/api/embed/c159e0a7-0914-4254-907e-747d09183512";
+    script.defer = true;
+    document.getElementById("soro-blog")?.appendChild(script);
+  }, []);
+
   return (
     <section className="my-24 mt-28">
       <div className="text-center">
@@ -28,8 +36,11 @@ export function BlogHeader() {
           informed with the latest accounting and tax advice.
         </p>
       </div>
+      <div>
+        <div id="soro-blog" className="mt-12" suppressHydrationWarning></div>
+      </div>
       {/* blog lists */}
-      <BlogPosts />
+      {/* <BlogPosts /> */}
     </section>
   );
 }
